@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1648139941780,
+    "name": "nuevo",
+    "description": "sdhjakhsdjaskda",
+    "img": "1648139941777_img_.png",
+    "price": "13",
+    "discount": "5"
+  },
+  {
+    "id": 1648066155923,
+    "name": "test3 sin img",
+    "description": "sdadsaadsad",
+    "img": "1648136519742_img_.jpeg",
+    "price": "5550000",
+    "discount": "9",
+    "category": "Headphones"
+  },
+  {
+    "id": 1648054483904,
+    "name": "test 02",
+    "description": "por que hay una coma entre los productos? ",
+    "img": "1648054483900_img_.png",
+    "category": "Speakers",
+    "price": "100",
+    "discount": "10"
+  },
+  {
+    "id": 1,
+    "name": "Bose SoundLink II",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "img": "muestra.png",
+    "category": "Headphones",
+    "price": 150000,
+    "discount": 18
+  }
+]

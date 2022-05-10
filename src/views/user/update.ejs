@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundSystem Register</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Montserrat&family=Roboto:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/stylesRegister.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e00c988d1a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--header-->
+    <%- include('../partials/header') %>
+
+    <form
+      action="/users/update/<%= usersToEdit.id  %>?_method=PUT"
+      method="POST"
+      class="form-user"
+    >
+      <div class="star-di  texto">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          value="<%= usersToEdit.name  %>"
+        />
+        <label for="name">Nombre</label>
+        <input
+          type="text"
+          name="apellido"
+          id="apellido"
+          value="<%= usersToEdit.apellido  %>"
+        />
+        <label for="name">Apellido</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value="<%= usersToEdit.email  %>"
+        />
+        <label for="name">Email</label>
+        <input
+          type="password"
+          name="pass"
+          id="pass"
+          placeholder="ingrese su nueva contraseña"
+        />
+        <div>
+          <select name="category" id="category">
+            <option value="">Elejir una opción</option>
+            <option value="administrador">administrador</option>
+            <option value="cliente">cliente</option>
+          </select>
+          <label for="category">Categoría</label>
+        </div>
+      </div>
+      <br />
+      <div class="control-login">
+        <button class="button">GUARDAR</button>
+        <button type="reset" class="button">CANCELAR</button>
+      </div>
+    </form>
+    <!--footer-->
+    <%- include('../partials/footer') %>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+@import url("global.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  --blackColor: #000000;
+  --purpleColor: #5e60ce;
+  --blueColor: #5390d9;
+  --blueGreen: #48bfe3;
+  --aquaColor: #64dfdf;
+  --greenColor: #80ffdb;
+  --whiteColor: #ffffff;
+  --grayColor: #f5f5f5;
+}
+
+body {
+  background-color: var(--whiteColor);
+  width: 100%;
+}
+
+.newProduct {
+  width: 100%;
+}
+
+.fomrContainer {
+  width: 100%;
+}
+
+.fomrContainer .addImg {
+  display: none;
+}
+
+.fomrContainer form {
+  color: var(--blackColor);
+  display: flex;
+  flex-direction: column;
+  padding: 40px 7%;
+  width: 100%;
+}
+
+.fomrContainer form h1 {
+  font-weight: 400;
+  width: 100%;
+  margin: 15px 0 25px;
+  font-size: 28px;
+}
+
+.fomrContainer form label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.fomrContainer form input {
+  border: 1px solid var(--blackColor);
+  font-size: 16px;
+  height: 30px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 0 15px;
+}
+
+.fomrContainer form textarea {
+  border: 1px solid var(--blackColor);
+  margin-bottom: 20px;
+  max-height: 150px;
+  max-width: 100%;
+  min-height: 150px;
+  min-width: 100%;
+  outline: none;
+  padding: 15px;
+}
+
+.fomrContainer form .productImgLabel:hover {
+  background-color: var(--purpleColor);
+  color: var(--whiteColor);
+}
+
+.fomrContainer form #productImg {
+  display: block;
+  padding: 5px;
+  height: auto;
+}
+
+.fomrContainer form div h2 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.fomrContainer form div label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fomrContainer form div label input {
+  margin: 0 0 0 15px ;
+}
+
+
+.fomrContainer form button {
+  background-color: var(--blueGreen);
+  border-radius: 50px;
+  border: none;
+  color: var(--grayColor);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px auto 0;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  transition: all ease 0.4s;
+  width: 180px;
+}
+
+.fomrContainer form button:hover {
+  background-color: var(--aquaColor);
+  color: var(--grayColor);
+}
+
+@media screen and (min-width: 768px) {
+  .fomrContainer form {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+    .fomrContainer{
+        display: flex;
+        flex-direction: row;
+    }
+    
+  .fomrContainer .addImg {
+    background-image: url('../images/muestra3.jpeg');
+    background-size: cover;
+    display: inline-block;
+    width: 50%;
+  }
+
+  .fomrContainer .editImg {
+    background-image: url('../images/muestra4.jpeg');
+  }
+
+  .fomrContainer form {
+    margin: 0;
+    width: 50%;
+    padding: 40px 10%;
+  }
+}

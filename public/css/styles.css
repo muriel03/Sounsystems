@@ -1,0 +1,336 @@
+@import url("global.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  --blackColor: #000000;
+  --purpleColor: #5e60ce;
+  --blueColor: #5390d9;
+  --blueGreen: #48bfe3;
+  --aquaColor: #64dfdf;
+  --greenColor: #80ffdb;
+  --whiteColor: #ffffff;
+  --grayColor: #f5f5f5;
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: var(--whiteColor);
+  width: 100%;
+}
+/*Header*/
+.fa-search,
+.fa-user,
+.fa-cart-plus {
+  color: rgb(85, 150, 207);
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+/*Header*/
+header {
+  background-color: #000;
+  height: 200px;
+}
+.ss-icon {
+  margin-left: 50px;
+  height: 150px;
+  background-color: white;
+  width: 50%;
+}
+.ss-nav-bar {
+  display: none;
+}
+.ss-container {
+  background-color: #000;
+  height: 50px;
+  display: block;
+  align-items: center;
+}
+/* Banner */
+.banner {
+  width: 100%;
+  height: 600px;
+  animation: banner 10s infinite linear alternate;
+  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration-color: #000000;
+}
+@keyframes banner {
+  0%,
+  20% {
+    background-image: url(../images/banner1.jpeg);
+  }
+  25%,
+  45% {
+    background-image: url(../images/banner2.jpeg);
+  }
+  50%,
+  70% {
+    background-image: url(../images/banner3.jpeg);
+  }
+  75%,
+  100% {
+    background-image: url(../images/banner4.jpeg);
+  }
+}
+.capa {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.info {
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/*Productos*/
+
+.cartContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 7%;
+  width: 100%;
+}
+
+.cartContainer h1 {
+  font-weight: 400;
+  width: 100%;
+  margin: 15px 0 25px;
+}
+
+.cartContainer .product {
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 35px;
+  transition: all ease 0.4s;
+  width: 260px;
+}
+
+.cartContainer .product .imgContainer img {
+  width: 100%;
+}
+
+.cartContainer .product .productInfo .add {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Infografia */
+.container .container-info form h2 {
+  font-size: 10px;
+}
+.container {
+  background-color: var(--blackColor);
+  background-image: url("../images/fondo1.png");
+  background-size: 100% 100%;
+  padding: 35px 7%;
+  width: 100%;
+}
+.container .container-info form {
+  color: var(--whiteColor);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.container .container-info form button {
+  background-color: var(--blueGreen);
+  border-radius: 50px;
+  border: none;
+  color: var(--grayColor);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 15px auto;
+  padding: 10px;
+  transition: all ease 0.4s;
+  width: 200px;
+}
+
+/*Container-1 */
+.container-1 .container-info form {
+  color: var(--whiteColor);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container-1 .container-info form h2 {
+  font-size: 10px;
+}
+.container-1 {
+  background-color: var(--blackColor);
+  background-image: url("../images/fondo2.jpeg");
+  background-size: 100% 100%;
+  padding: 35px 7%;
+  width: 100%;
+}
+.container-1 .container-info form button {
+  background-color: var(--blueGreen);
+  border-radius: 50px;
+  border: none;
+  color: var(--grayColor);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 15px auto;
+  padding: 10px;
+  transition: all ease 0.4s;
+  width: 200px;
+  flex-direction: column;
+}
+
+/* Container-2 */
+.container-2 {
+  background-color: var(--blackColor);
+  background-image: url("../images/fondo3.png");
+  background-size: 100% 100%;
+  height: 200px;
+  width: 100%;
+}
+
+.container-2 .container-info {
+  width: 100%;
+}
+
+.container-2 .container-info form {
+  color: var(--blackColor);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container-2 .container-info form button {
+  background-color: var(--blueGreen);
+  border-radius: 50px;
+  border: none;
+  color: var(--grayColor);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 15px auto;
+  padding: 10px;
+  transition: all ease 0.4s;
+  width: 200px;
+}
+
+.container-2 .container-info form button:hover {
+  background-color: var(--aquaColor);
+  color: var(--grayColor);
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+}
+.footer-social * {
+  padding-left: 10%;
+  font-size: 30px;
+  color: #ffffff;
+}
+.termsAndConditions {
+  background-color: #000000;
+  font-family: Monserrat;
+  color: #ffffff;
+  font-size: 8px;
+}
+ul {
+  display: inline-block;
+  padding-right: 50px;
+  padding-left: 0px;
+  letter-spacing: 0.1em;
+  list-style-type: none;
+}
+.footer-social {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-family: "Montserrat";
+    background-color: var(--whiteColor);
+    width: 100%;
+  }
+  /*Header*/
+  header {
+    background-color: #000;
+  }
+  .ss-container {
+    float: right;
+    height: 20px;
+    margin-top: 60px;
+    display: flex;
+  }
+  .cartContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 40px;
+  }
+  .ss-icon {
+    margin-left: 5px;
+    height: 150px;
+    width: 200px;
+    background-color: white;
+  }
+  .ss-nav-bar {
+    display: flex;
+  }
+  .ss-search-bar {
+    width: auto;
+    height: 30px;
+    border-radius: 10px;
+    padding-right: 15px;
+  }
+  .ss-container i {
+    padding-right: 15px;
+    color: aliceblue;
+    letter-spacing: 18px;
+  }
+
+  /* Barra de navegacion*/
+  .ss-nav-bar {
+    background-color: black;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .ss-nav-bar nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 8px;
+    font-size: 1rem;
+  }
+  .ss-nav-bar nav a:hover {
+    background-color: white;
+    color: darkgray;
+    border-radius: 15px;
+  }
+  .product {
+    z-index: 100;
+  }
+  .termsAndConditions {
+    align-items: stretch;
+    padding-left: 100px;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .termsAndConditions {
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,188 @@
+/*  Product Description */
+@import url("global.css");
+* {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+}
+
+*::selection {
+  background: #48bfe3;
+  color: #ffffff;
+}
+
+section {
+  min-height: 100vh;
+  padding: 0 5%;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+/*Header*/
+header {
+  background-color: #000;
+}
+.ss-container {
+  float: right;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 22px;
+}
+.ss-search-bar {
+  width: auto;
+  height: 30px;
+  border-radius: 10px;
+  padding-right: 15px;
+}
+.ss-container i {
+  padding-right: 15px;
+  color: aliceblue;
+  letter-spacing: 18px;
+}
+.ss-icon {
+  margin-left: 50px;
+  height: 150px;
+  background-color: white;
+}
+
+/* Barra de navegacion*/
+.ss-nav-bar {
+  background-color: black;
+}
+.ss-nav-bar nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 8px;
+  font-weight: bold;
+}
+.ss-nav-bar nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 8px;
+  font-size: 1rem;
+}
+.ss-nav-bar nav a:hover {
+  background-color: white;
+  color: darkgray;
+  border-radius: 15px;
+}
+
+.inicio {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: 0%;
+}
+
+.inicio .image img {
+  width: 20vw;
+  align-items: center;
+}
+
+.img-logo {
+  width: 7vw;
+  padding: 0;
+  margin: 10%;
+  border: solid 1px aqua;
+}
+
+.description {
+  display: inline-block;
+  width: 600px;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+.img-product {
+  width: 45vw;
+  display: inline-block;
+  padding: 1px;
+  align-items: center;
+  margin-top: 50px;
+  animation: float 6s linear infinite;
+}
+/* Footer */
+.footer {
+  width: 100%;
+}
+.footer-social * {
+  padding-left: 10%;
+  font-size: 40px;
+  color: #ffffff;
+}
+.termsAndConditions {
+  background-color: #000000;
+  font-family: Monserrat;
+  color: #ffffff;
+}
+footer ul {
+  display: inline-block;
+  padding-right: 50px;
+  padding-left: 106px;
+  letter-spacing: 0.1em;
+  list-style-type: none;
+}
+.footer-social {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-bottom: 40px;
+  padding-bottom: 20px;
+}
+@media (min-width: 361px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 1200px) {
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(-3.5rem);
+  }
+}
+
+.content {
+  background-color: white;
+  padding-left: 1%;
+}
+
+h3 {
+  padding-left: 50px;
+  padding-top: 40px;
+}
+
+.btn {
+  display: inline-block;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 5%;
+  padding: 0.8rem 3rem;
+  border-radius: 5rem;
+  background-color: #5390d9;
+  font-size: 1.8rem;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3 linear;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+#comprar {
+  list-style: none;
+}

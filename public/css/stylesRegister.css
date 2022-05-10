@@ -1,0 +1,226 @@
+@import url("global.css");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  --blackColor: #000000;
+  --purpleColor: #5e60ce;
+  --blueColor: #5390d9;
+  --blueGreen: #48bfe3;
+  --aquaColor: #64dfdf;
+  --greenColor: #80ffdb;
+  --whiteColor: #ffffff;
+  --grayColor: #f5f5f5;
+}
+
+body {
+  font-family: "Montserrat";
+  background-color: var(--whiteColor);
+  width: 100%;
+}
+/*Header*/
+.fa-search,
+.fa-user,
+.fa-cart-plus {
+  color: rgb(85, 150, 207);
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+/*Header*/
+header {
+  background-color: #000;
+  height: 200px;
+}
+.ss-icon {
+  margin-left: 50px;
+  height: 150px;
+  background-color: white;
+  width: 50%;
+}
+.ss-nav-bar {
+  display: none;
+}
+.ss-container {
+  background-color: #000;
+  height: 50px;
+  display: block;
+  align-items: center;
+}
+/*formulario*/
+.form-register {
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.form-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 1em;
+  border: 1px solid rgb(22, 4, 4);
+  border-radius: 1em;
+}
+.control-login {
+  margin-top: 5px;
+  color: #022355;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.button {
+  margin-top: 10px;
+  background-color: #093c88;
+  color: #ffffff;
+  min-width: 100px;
+  border: 0;
+  line-height: 2.5;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+.texto {
+  margin-left: 10px;
+}
+/* Footer */
+.footer {
+  width: 100%;
+}
+.footer-social * {
+  padding-left: 10%;
+  font-size: 30px;
+  color: #ffffff;
+}
+.termsAndConditions {
+  background-color: #000000;
+  font-family: Monserrat;
+  color: #ffffff;
+}
+ul {
+  display: inline-block;
+  padding-right: 50px;
+  padding-left: 0px;
+  letter-spacing: 0.1em;
+  list-style-type: none;
+}
+.footer-social {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-bottom: 40px;
+  padding-bottom: 20px;
+}
+.item {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 8px;
+}
+.item-input {
+  padding: 8px;
+  border-radius: 4px;
+  border: solid black 1px;
+}
+.item-input:focus {
+  outline: none;
+}
+.first-item,
+.second-item,
+.third-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  width: 750px;
+}
+.text-danger {
+  color: red;
+}
+.is-invalid {
+  border-color: #dc3545;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+@media (min-width: 768px) {
+  body {
+    font-family: "Montserrat";
+    background-color: var(--whiteColor);
+    width: 100%;
+  }
+  /*Header*/
+  header {
+    background-color: #000;
+  }
+  .ss-container {
+    float: right;
+    height: 20px;
+    margin-top: 60px;
+    display: flex;
+  }
+  .cartContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 40px;
+  }
+  .ss-icon {
+    margin-left: 5px;
+    height: 150px;
+    width: 200px;
+    background-color: white;
+  }
+  .ss-nav-bar {
+    display: flex;
+  }
+  .ss-search-bar {
+    width: auto;
+    height: 30px;
+    border-radius: 10px;
+    padding-right: 15px;
+  }
+  .ss-container i {
+    padding-right: 15px;
+    color: aliceblue;
+    letter-spacing: 18px;
+  }
+
+  /* Barra de navegacion*/
+  .ss-nav-bar {
+    background-color: black;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .ss-nav-bar nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 8px;
+    font-size: 1rem;
+  }
+  .ss-nav-bar nav a:hover {
+    background-color: white;
+    color: darkgray;
+    border-radius: 15px;
+  }
+  .product {
+    z-index: 100;
+  }
+  .termsAndConditions {
+    align-items: stretch;
+    padding-left: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .termsAndConditions {
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

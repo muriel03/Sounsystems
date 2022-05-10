@@ -1,0 +1,5 @@
+#ignorando los node_modules
+node_modules
+
+#ignorando el package-lock.json
+*package-lock.json

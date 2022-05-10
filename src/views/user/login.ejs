@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundSystem Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Montserrat&family=Roboto:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/stylesLogin.css" />
+    <!-- <link rel="stylesheet" href="/css/stylesRegister.css" />-->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e00c988d1a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--header-->
+    <%- include ('../partials/header') %>
+
+    <article class="form-register">
+      <h2 class="title-login">Formulario de Login</h2>
+      <form method="POST" action="/users/login" class="form-user">
+        <label class="item">
+          <b>Ingresa tu email:</b>
+          <input type="text" name="email" class="item-input" />
+          <% if (locals.errors && errors.email) { %>
+          <div class="text-danger"><%= errors.email.msg %></div>
+          <% } %>
+        </label>
+
+        <label class="item">
+          <b>Ingresa tu contraseña:</b>
+          <input type="password" name="password" class="item-input" />
+        </label>
+        <div>
+          <label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              name="remember_user"
+            />Recordar mi usuario
+          </label>
+        </div>
+
+        <div class="item">
+          <button type="submit" class="button">Ingresar</button>
+          <button type="reset" class="button">Cancelar</button>
+        </div>
+        <div class="control-register">
+          <i class="fas fa-user-plus"></i>
+          <a href="/users/register">
+            <h4>You don't have a user? Sign up</h4>
+          </a>
+        </div>
+      </form>
+    </article>
+    <!--footer-->
+    <%- include('../partials/footer')%>
+  </body>
+</html>

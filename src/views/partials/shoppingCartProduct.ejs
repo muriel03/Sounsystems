@@ -1,0 +1,18 @@
+<% products.map(i => { %>
+  <section class="product">
+   <div class="imgContainer">
+     <img alt="nombre producto" src=<%- "images/" + i.img %> />
+   </div>
+   <div class="productInfo">
+     <h3><%= i.name %></h3>
+     <h4><%= i.category %></h4>
+     <h2>$<%=  Math.floor(i.price - (i.price * i.discount / 100))%></h2>
+     <section class="add">
+       <i class="fa-solid fa-circle-plus"></i>
+       <p>1</p>
+       <i class="fa-solid fa-circle-minus"></i>
+       <i class="fa-solid fa-trash-can trash"></i>
+     </section>
+   </div>
+ </section>
+<% }) %>

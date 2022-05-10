@@ -1,0 +1,37 @@
+<header>
+  <a href="/"
+    ><img src="/images/logo-SoundSystem.jpeg" alt="" class="ss-icon"
+  /></a>
+  <div class="ss-container">
+    <input type="search" placeholder="Search" class="ss-search-bar" />
+    <i class="fa fa-search"></i>
+    <a href="shoppingCart"><i class="fa fa-cart-plus"></i></a>
+
+    <% if (locals.isLogged) { %>
+    <a href="/users/profile" class="register">My profile</a>
+    <img
+      src="/images/avatar/<%= locals.userLogged.avatar %>"
+      alt=""
+      class="ss-icon"
+    />
+    <a class="dropdown-item" href="/users/logout"
+      >Logout Hola! <%= locals.userLogged.fullName %></a
+    >
+
+    <% } else { %>
+    <a href="/users/register" class="register">Register</a>
+    <a href="/users/login" class="login">Login</a>
+    <% } %>
+  </div>
+
+  <div class="ss-nav-bar">
+    <nav>
+      <a href="/">Home</a>
+      <a href="#">Pruductos Nuevos</a>
+      <a href="#">Audífonos</a>
+      <a href="#">Speaker</a>
+      <a href="#">Altavoces</a>
+      <a href="#">Contact us</a>
+    </nav>
+  </div>
+</header>
