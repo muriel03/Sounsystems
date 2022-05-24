@@ -1,37 +1,48 @@
 <header>
-  <a href="/"
-    ><img src="/images/logo-SoundSystem.jpeg" alt="" class="ss-icon"
-  /></a>
-  <div class="ss-container">
+  <a href="/"><img src="/images/logo-SoundSystem.jpeg" alt="" class="ss-icon" /></a>
+  <div class="searchBar">
     <input type="search" placeholder="Search" class="ss-search-bar" />
     <i class="fa fa-search"></i>
+  </div>
+  <div class="ss-container">
+
     <a href="shoppingCart"><i class="fa fa-cart-plus"></i></a>
 
     <% if (locals.isLogged) { %>
-    <a href="/users/profile" class="register">My profile</a>
-    <img
-      src="/images/avatar/<%= locals.userLogged.avatar %>"
-      alt=""
-      class="ss-icon"
-    />
-    <a class="dropdown-item" href="/users/logout"
-      >Logout Hola! <%= locals.userLogged.fullName %></a
-    >
+      <div class="profileCont">
+        <img src="/images/avatar/<%= locals.userLogged.avatar %>" alt="" class="ss-icon" />
+        <h2>
+          <%= locals.userLogged.fullName %>
+        </h2>
+        <button class="userDropdownRow"
+          onclick="function toggleVisible(){let dropdown = document.getElementById('dropdown');dropdown.classList.toggle('visible')};toggleVisible()">
+          <i class="fa-solid fa-caret-down"></i>
+        </button>
+        <div class="userDropdown" id="dropdown">
+          <ul>
+            <li>My profile</li>
+            <hr>
+            <li>Logout</li>
+          </ul>
+        </div>
+      </div>
+      >
 
-    <% } else { %>
-    <a href="/users/register" class="register">Register</a>
-    <a href="/users/login" class="login">Login</a>
-    <% } %>
-  </div>
-
-  <div class="ss-nav-bar">
-    <nav>
-      <a href="/">Home</a>
-      <a href="#">Pruductos Nuevos</a>
-      <a href="#">Audífonos</a>
-      <a href="#">Speaker</a>
-      <a href="#">Altavoces</a>
-      <a href="#">Contact us</a>
-    </nav>
+      <% } else { %>
+        <button class="registerBtn"><a href="/users/register" class="register">Register</a></button>
+        <button class="loginBtn"><a href="/users/login" class="login">Login</a></button>
+        <% } %>
   </div>
 </header>
+<div class="ss-nav-bar">
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="#">New products</a></li>
+      <li><a href="#">Headphones</a></li>
+      <li><a href="#">Speaker</a></li>
+      <li><a href="#">Contact us</a></li>
+    </ul>
+
+  </nav>
+</div>
