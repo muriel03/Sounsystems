@@ -1,125 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoundSystem Register</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Montserrat&family=Roboto:ital,wght@1,100&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/stylesRegister.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/e00c988d1a.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!--header-->
-    <%- include('../partials/header') %>
-    
-    <article class="form-register">      
-    <h2 class="title-register">Formulario de Registro</h2>
 
-    <form method="POST" action="/users/register" class="form-user" enctype="multipart/form-data">
-     
-      <div class="first-item">
-            <label class="item">
-              <b>Nombre completo:</b>
-              <input 
-              type="text"
-              name="fullName"
-              class="item-input <%= locals.errors && errors.fullName ? 'is-invalid' : null %>" 
-              value="<%= locals.oldData ? oldData.fullName : null %>"/>
-              <% if (locals.errors && errors.fullName) { %>
-                <div class="text-danger">
-                  <%= errors.fullName.msg%>
-                </div> 
-                <% } %>       
-              </label>               
-            
-            <label class="item">
-              <b>Correo electrónico:</b>
-              <input 
-              type="text" 
-              name="email" 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoundSystem Register</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Montserrat&family=Roboto:ital,wght@1,100&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/stylesRegister.css" />
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/e00c988d1a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!--header-->
+  <%- include('../partials/header') %>
+
+    <article class="form-register">
+      <h2 class="title-register">Formulario de Registro</h2>
+
+      <form method="POST" action="/users/register" class="form-user" enctype="multipart/form-data">
+
+        <div class="first-item">
+          <label class="item">
+            <b>Nombre completo:</b>
+            <input type="text" name="fullName"
+              class="item-input <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
+              value="<%= locals.oldData ? oldData.fullName : null %>" />
+            <% if (locals.errors && errors.fullName) { %>
+              <div class="text-danger">
+                <%= errors.fullName.msg%>
+              </div>
+              <% } %>
+          </label>
+
+          <label class="item">
+            <b>Correo electrónico:</b>
+            <input type="text" name="email"
               class="item-input <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-              value="<%= locals.oldData ? oldData.email : null %>"/>  
-              <% if (locals.errors && errors.email) { %>
-                <div class="text-danger">
-                  <%= errors.email.msg%>
-                </div> 
-                <% } %>               
-            </label>
-      </div>
+              value="<%= locals.oldData ? oldData.email : null %>" />
+            <% if (locals.errors && errors.email) { %>
+              <div class="text-danger">
+                <%= errors.email.msg%> 
+              </div>
+              <% } %>
+          </label>
+        </div>
 
-      <div class="second-item">  
-            <label class="item">
-              <b>Password:</b>
-              <input type="password"
-               name="password" 
-               class="item-input  <%= locals.errors && errors.password ? 'is-invalid' : null %>" />  
-               <% if (locals.errors && errors.password) { %>
-                <div class="text-danger">
-                  <%= errors.password.msg%>
-                </div> 
-                <% } %>       
-            </label>
-          
-            <label class="item">
-              <b>Categoria:</b>
-              <select 
-              name="category"
-              id="category" 
+        <div class="second-item">
+          <label class="item">
+            <b>Password:</b>
+            <input type="password" name="password"
+              class="item-input  <%= locals.errors && errors.password ? 'is-invalid' : null %>" />
+            <% if (locals.errors && errors.password) { %>
+              <div class="text-danger">
+                <%= errors.password.msg%>
+              </div>
+              <% } %>
+          </label>
+
+          <label class="item">
+            <b>Type User:</b>
+            <select name="category" id="category"
               class="item-input <%= locals.errors && errors.category ? 'is-invalid' : null %>">
-                
-              <option value="">Elija una opción</option>
-                <% let categories = ['Mayorista', 'Dropshipping', 'Detal'] %> 
 
-                <% for(const oneCategory of categories ) { %>
-                  <option
-                  value="<%= oneCategory %>"
-                  <%= locals.oldData && (oneCategory === oldData.category)? 'selected' : null  %>
-                   > <%= oneCategory %> </option> 
-                <% } %> 
-              </select>
-              <% if (locals.errors && errors.category) { %>
-                <div class="text-danger">
-                  <%= errors.category.msg%>
-                </div> 
+              <option value="">Elija una opción</option>
+              <% for(const oneCategory of category ) { %>
+                <option value="<%= oneCategory %>" <%=locals.oldData && (oneCategory===oldData.category)? 'selected' :
+                  null %>
+                  > <%= oneCategory %>
+                </option>
                 <% } %>
-            </label>
-          </div>
-      </div>
-     
-        <div class="third-item">   
-            <label class="item">
-              <b>Imagen de perfil:</b>
-              <input type="file" name="avatar" />
-              <% if (locals.errors && errors.avatar) { %>
-                <div class="text-danger">
-                  <%= errors.avatar.msg%>
-                </div>
-              <% } %>            
-            </label> 
-    </div>
-    <div class="col-12 my-3">
-      <button type="submit" class="button">Registrarse</button>
-      <button type="reset" class="button">Cancelar</button>
-    </div> 
-    </form>
-  </article>
+            </select>
+            <% if (locals.errors && errors.category) { %>
+              <div class="text-danger">
+                <%= errors.category.msg%>
+              </div>
+              <% } %>
+          </label>
+        </div>
+        </div>
+
+        <div class="third-item">
+          <label class="item">
+            <b>Imagen de perfil:</b>
+            <input type="file" name="avatar" />
+            <% if (locals.errors && errors.avatar) { %>
+              <div class="text-danger">
+                <%= errors.avatar.msg%>
+              </div>
+              <% } %>
+          </label>
+        </div>
+        <div class="col-12 my-3">
+          <button type="submit" class="button">Registrarse</button>
+          <button type="reset" class="button">Cancelar</button>
+        </div>
+      </form>
+    </article>
 
     <!--footer-->
     <%- include('../partials/footer') %>
-  </body>
+</body>
+
 </html>

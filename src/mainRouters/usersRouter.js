@@ -2,6 +2,7 @@
 const express = require("express");
 const router = express.Router();
 
+
 const path = require("path");
 const multer = require("multer");
 
@@ -57,12 +58,8 @@ const usersController = require("../controllers/usersController");
 router.get("/register", guesMiddleware, usersController.register);
 
 //Procesar el registro
-router.post(
-  "/register",
-  uploadFile.single("avatar"),
-  validations,
-  usersController.proccesRegister
-);
+router.post("/register", uploadFile.single("avatar"), 
+            validations, usersController.proccesRegister);
 
 //formulario de login
 router.get("/login", guesMiddleware, usersController.login);
@@ -76,4 +73,7 @@ router.get("/profile", authMiddleware, usersController.profile);
 //logout
 router.get("/logout", usersController.logout); 
 
+//edit
+router.get("/detail/:id", usersController.detail);
+router.put("/edit/:id", usersController.edit);
 module.exports = router;

@@ -1,0 +1,77 @@
+.top h1,
+.main-top h1 {
+  text-align: center;
+}
+.button ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.button ul li {
+  list-style: none;
+  border-radius: 10px;
+  border: solid 1px black;
+  padding: 10px;
+  min-width: 100px;
+  text-align: center;
+}
+.button ul li a {
+  text-decoration: none;
+  color: black;
+}
+.button-top h3 {
+  margin: 0px;
+}
+.button-down {
+  margin-top: 15px;
+}
+.button-down i {
+  margin: 0px 5px;
+}
+.button-down form{
+  display: inline;
+}
+.button-down form button{
+    border: 0;
+    background-color: transparent;
+}
+.fa-trash {
+  color: red;
+}
+.fa-marker {
+  color: blue;
+}
+.plus {
+  text-align: end;
+  margin-right: 60px;
+}
+.plus i {
+  font-size: xx-large;
+  color: green;
+}
+.main-bottom {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+form label {
+  display: block;
+  font-size: larger;
+}
+form input {
+  padding: 10px;
+  margin: 10px 0px;
+  width: 30vw;
+}
+.from-bottom {
+  margin: 10px;
+  text-align: end;
+}
+.from-bottom button {
+  margin: 0px 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+.from-bottom button:first-child {
+  background-color: darkgray;
+}

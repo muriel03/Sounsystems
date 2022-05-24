@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/listaCategorias.css" />
+    <script src="https://kit.fontawesome.com/e00c988d1a.js" crossorigin="anonymous"></script>
+    <title>List Brands</title>
+</head>
+
+<body>
+    <main>
+        <div class="top">
+            <h1>Detail List Brands</h1>
+            <div class="plus">
+                <a href="/brands/add"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+        </div>
+        <div class="button">
+            <ul>
+                <% for(let i=0; i < brand.length; i++ ){ %>
+                    <li>
+                        <div class="button-top">
+                            <h3>
+                                <%= brand[i].name %>
+                            </h3>
+                        </div>
+                        <div class="button-down"> 
+                            
+                            <a href="/brands/detail/<%= brand[i].id %> "><i class="fas fa-marker"></i></a>
+                            
+                            <form action="/brands/delete/<%= brand[i].id%>?_method=DELETE" method="POST">
+                                <button type="submit"><i class="fas fa-trash"></i></button>
+
+                            </form>
+                        </div>
+                    </li>
+                    <% } %>
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>

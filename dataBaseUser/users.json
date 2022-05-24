@@ -6,5 +6,53 @@
   "password": "$2a$10$lE6xRHatN1vDp92s9ZiGwOZf00MeexgWOlXJ6LPgbtRXBIZgxZNTq",
   "category": "Mayorista",
   "avatar": "1651075411627_img.jpg"
+ },
+ {
+  "id": 2,
+  "fullName": "mario",
+  "email": "mario@gmail.com",
+  "password": "$2a$10$HZUlQ4jesB06pKFEVJx8jOr2Pf3OtIY4pf3YCgjBE1KW/5baBQ93G",
+  "category": "Mayorista",
+  "avatar": "1653177376618_img.jpg"
+ },
+ {
+  "id": 3,
+  "fullName": "mario",
+  "email": "mario@gmail.com",
+  "password": "$2a$10$2j7/3TZHnaSfQRKw9I7GA.hqeVvP/V1SuaO5ypOsFFhyuCd65L6qS",
+  "category": "Dropshipping",
+  "avatar": "1653177454550_img.jpg"
+ },
+ {
+  "id": 4,
+  "fullName": "mario",
+  "email": "mario@gmail.com",
+  "password": "$2a$10$LD4OAYe0feKc0ZjLVVd9keSPRHQ5u59s.LI0NDZ7P855IPyzcZygC",
+  "category": "Mayorista",
+  "avatar": "1653177601835_img.jpg"
+ },
+ {
+  "id": 5,
+  "fullName": "mario",
+  "email": "mario@gmail.com",
+  "password": "$2a$10$CWh6HeLokOd4G9HIwCRgKePJ8gC9uBmvJ66Bgqt236YGhW3xLXrYG",
+  "category": "Mayorista",
+  "avatar": "1653177674336_img.jpg"
+ },
+ {
+  "id": 6,
+  "fullName": "juan",
+  "email": "juan@gmail.com",
+  "password": "$2a$10$flFFs1ED6Cm12Jf4Qm8FI.AW8KP0pI8iiEek1JTHRCHP8ML448BeG",
+  "category": "Dropshipping",
+  "avatar": "1653177734807_img.jpg"
+ },
+ {
+  "id": 7,
+  "fullName": "juan",
+  "email": "juan@gmail.com",
+  "password": "$2a$10$UmYQTJ.yCYJQN7KC7/G18.85hoj5xTslCKVbDoGkVf0FoKKhJH1sK",
+  "category": "Mayorista",
+  "avatar": "1653177832099_img.jpg"
  }
 ]

@@ -27,47 +27,35 @@
     <!--header-->
     <%- include('../partials/header') %>
 
-    <form
-      action="/users/update/<%= usersToEdit.id  %>?_method=PUT"
-      method="POST"
-      class="form-user"
-    >
+    <form action="/users/edit/<%= usersToEdit.id  %>?_method=PUT"
+      method="POST" class="form-user" >
+
       <div class="star-di  texto">
+        <label for="name">Nombre Completo</label>
         <input
           type="text"
-          name="name"
-          id="name"
+          name="fullName"
+          id="fullName" 
           required
-          value="<%= usersToEdit.name  %>"
+          value="<%= usersToEdit.fullName %>"
         />
-        <label for="name">Nombre</label>
-        <input
-          type="text"
-          name="apellido"
-          id="apellido"
-          value="<%= usersToEdit.apellido  %>"
-        />
-        <label for="name">Apellido</label>
+       
+        <label for="name">Email</label>
         <input
           type="email"
           name="email"
           id="email"
           value="<%= usersToEdit.email  %>"
         />
-        <label for="name">Email</label>
+       
         <input
           type="password"
-          name="pass"
-          id="pass"
+          name="password"
+          id="password"
           placeholder="ingrese su nueva contraseña"
         />
         <div>
-          <select name="category" id="category">
-            <option value="">Elejir una opción</option>
-            <option value="administrador">administrador</option>
-            <option value="cliente">cliente</option>
-          </select>
-          <label for="category">Categoría</label>
+         
         </div>
       </div>
       <br />

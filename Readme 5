@@ -1,0 +1,23 @@
+Proyecto integrador para Digital House; Grupo 04.
+
+Se realizó el sprint 5 y se terminó el día de hoy 28 de abril de 2022, se solicita a los profesores validar el tema de cookies ya que tengo un pequeño problema con la varible 
+"userEmail" siento esta una varible asignada desde el body debe de leerse en cualquier archivo del sotfaware pues esta sería globla el metodo creado en el userLoggedMiddleware
+es 
+/*let emailInCookie = req.cookies.userEmail;
+  let userFromCookie = user.findByField("email", emailInCookie);
+
+  console.log(userFromCookie);
+
+  if (userFromCookie) {
+    req.session.userLogged = userFromCookie;
+  }*/ //userEmail -> varible dice que no esta definida 
+  
+  pero en el usersController si la lee, esta seteada en la linea 57 "res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 2 });"
+  
+  y usada en la linea  79 "console.log(req.cookies.userEmail);//userEmail" 
+  
+  Seguimos teniendo problemas serios de comunicación  en el grupo y esto esta afectando seriamente al desarrollo del trabajo en equipo, si bien cada uno sabe que 
+  debe de hacer no hay un espacio o no se esta creando ese espacio donde se puedan hacer preguntas relacionadas con el desarrollo del Ecomerce (las dudas se solucionaron
+  con otros compañeros) 
+  
+  
