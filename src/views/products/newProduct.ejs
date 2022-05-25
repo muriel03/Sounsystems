@@ -40,21 +40,20 @@
           <label for="productImg" class="productImgLabel">Product images:</label>
           <input type="file" id="productImg" name="productImg" required/>
           <div>
-            <h2>category:</h2>
-            <label for="Headphones"
-              >Headphones:<input
-                type="radio"
-                name="category"
-                id="Headphones"
-                value="Headphones"
-            /></label>
-            <label for="Speakers"
-              >Speakers:<input
-                type="radio"
-                name="category"
-                id="Speakers"
-                value="Speakers"
-            /></label>
+            <h2>Brands:</h2>
+            <select for="" name="brand">
+              <% for(let i = 0; i < brandList.length; i++) {%>
+                <option value= "<%= brandList[i].id %>"><%= brandList[i].name %></option>
+              <% } %>
+            </select>
+          </div>
+          <div>
+            <h2>Category:</h2>
+            <select for="" name="category">
+              <% for(let i = 0; i < categoryList.length; i++) {%>
+                <option value= "<%= categoryList[i].id %>"><%= categoryList[i].name %></option>
+              <% } %>
+            </select>
           </div>
           <label for="productPrice">Price:</label>
           <input type="text" id="productPrice" name="productPrice" required/>

@@ -29,56 +29,7 @@ body {
   margin-right: 0px;
 }
 /*Header*/
-header {
-  background-color: #000;
-  height: 200px;
-}
-.ss-icon {
-  margin-left: 50px;
-  height: 150px;
-  background-color: white;
-  width: 50%;
-}
-.ss-nav-bar {
-  display: none;
-}
-.ss-container {
-  background-color: #000;
-  height: 50px;
-  width: 100%;
-  display: block;
-  align-items: center;
-}
-.contenedorUsers {
-  flex-wrap: wrap;
-  display: flex;
-  width: 100%;
-}
-.fila {
-  display: flex;
-  padding: 5px;
-  justify-content: space-between;
-  width: 100%;
-  border: solid 1px #000000;
-  background-color: #093c88;
-}
-.gray {
-  background-color: gray;
-  color: #ffffff;
-}
-.black {
-  background-color: #000;
-  color: #ffffff;
-}
-.items {
-  width: 16%;
-}
-.itemsId {
-  width: 2%;
-}
-.hid {
-  display: none;
-}
+
 /*formulario*/
 .form-user {
   display: flexb;
@@ -112,7 +63,6 @@ header {
   padding-right: 0%;
 }
 ul {
-  font-weight: bold;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -207,11 +157,8 @@ ul {
   }
   .ss-container {
     width: 50%;
-    float: right;
     height: 20px;
-    margin-top: 60px;
     display: flex;
-    padding: 5px;
   }
   .cartContainer {
     flex-direction: row;
@@ -243,8 +190,6 @@ ul {
   /* Barra de navegacion*/
   .ss-nav-bar {
     background-color: black;
-    margin-left: 50px;
-    margin-right: 50px;
   }
   .ss-nav-bar nav a {
     color: white;

@@ -29,7 +29,7 @@
         <section class="cartContainer">
             <h1>Productos Destacados</h1>
             <% for(i = 0; i < products.length; i++) { %>
-            <a href="productDetail"><section class="product">
+            <a href="productDetail/<%= products[i].id %>"><section class="product">
               <div class="imgContainer">
                 <img src="images/<%= products[i].img %>" alt="<%= products[i].name %>" />
               </div>

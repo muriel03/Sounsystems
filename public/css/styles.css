@@ -18,7 +18,13 @@ body {
   font-family: "Montserrat";
   background-color: var(--whiteColor);
   width: 100%;
+  max-width: 100%;
 }
+
+a {
+  text-decoration: none;
+}
+
 /*Header*/
 .fa-search,
 .fa-user,
@@ -32,6 +38,8 @@ body {
 header {
   background-color: #000;
   height: 200px;
+  display: flex;
+	align-items: center;
 }
 .ss-icon {
   margin-left: 50px;
@@ -42,11 +50,152 @@ header {
 .ss-nav-bar {
   display: none;
 }
-.ss-container {
-  background-color: #000;
+
+.profileCont {
+  display: flex;
+}
+
+.profileCont > img {
   height: 50px;
-  display: block;
+	width: 50px;
+	border-radius: 50%;
+}
+
+.profileCont > h2 {
+  color: white;
+	padding: 10px 0;
+	margin-left: 15px;
+  margin-right: 15px;
+}
+
+.userDropdownRow {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@keyframes dropdownFadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.userDropdown {
+  width: 125px;
+	position: absolute;
+	transform: translate(65px, 45px);
+	color: black;
+  background-color: white;
+  visibility: hidden;
+  padding: 10px;
+  border-radius: 5px;
+  animation: dropdownFadeIn 3s ease 0s 1 normal forwards;
+}
+
+.userDropdown ul {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes liHover {
+  
+}
+
+.userDropdown li:hover {
+  margin: 0;
+  padding: 0;
+}
+
+.userDropdown hr {
+  margin: 10px 0;
+}
+
+.visible{
+  visibility: visible;
+}
+
+.searchBar{
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  position: relative;
+  width: 65%;
+}
+
+.searchBar i{
+  position: absolute;
+  right: 21%;
+}
+
+.ss-container {
+  display: flex;
+  width: 25%;
+	justify-content: right;
+	margin-right: 0px;
+	padding-right: 30px;
+  height: 50px;
   align-items: center;
+  background-color: #000;
+}
+
+.registerBtn {
+  border-radius: 5px;
+	padding: 10px;
+	border: none;
+	text-align: center;
+	background: green;
+}
+
+@keyframes registerHover {
+  0% {background-color: #21803a;}
+  25% {background-color: #309c4d;}
+  50% {background-color: #58cc77;}
+  75% {background-color: #76db91;}
+  100% {background-color: #68ed8c;}
+}
+
+.registerBtn:hover {
+  background-color: #68ed8c;
+  animation-name: registerHover;
+  animation-duration: 0.2s;
+}
+
+.loginBtn {
+  border-radius: 5px;
+	padding: 10px;
+	border: none;
+	text-align: center;
+	background: #5565f2;
+}
+
+@keyframes loginHover {
+  0% {background-color: #5565f2;}
+  25% {background-color: #7784f7;}
+  50% {background-color: #7784f7;}
+  75% {background-color: #858ccc;}
+  100% {background-color: #a9afeb;}
+}
+
+
+.loginBtn:hover {
+  background-color: #a9afeb;
+  animation-name: loginHover;
+  animation-duration: 0.1s;
+}
+
+.registerBtn > a,.loginBtn > a {
+  text-decoration: none;
+	color: white;
+  font-size: 1rem;
+}
+
+.ss-container > a, .ss-container > button{
+  margin-right: 10px;
 }
 /* Banner */
 .banner {
@@ -93,6 +242,16 @@ header {
   max-width: 500px;
   text-align: center;
   color: #ffffff;
+}
+
+.buyPromo {
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  background-color: #5565f2;
+  outline: none;
+  border: none;
+  margin: 5% auto;
 }
 
 /*Productos*/
@@ -228,10 +387,75 @@ header {
   color: var(--grayColor);
 }
 
+.whatsapp {
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  z-index: 500;
+}
+
 /* Footer */
 .footer {
   width: 100%;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: 35% 20% 20% 20%;
+  column-gap: 20px;
+  padding: 10px;
+  color: white;
+  background-color: black;
 }
+
+#description {
+  grid-column: 1;
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 60px;
+}
+
+#description > hr {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+#footerCategories {
+  grid-column: 2;
+  grid-row: 1/2;
+}
+
+#contact {
+  grid-column: 3;
+  grid-row: 1/2;
+}
+
+#socials {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+#socials i {
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+#footerCategories, #contact{
+  font-size: small;
+}
+
+#socials a{
+  color: white;
+}
+
+.facebook {
+  margin-bottom: 20px;
+}
+.verticalCenter {
+  display: flex;
+  align-items: center;
+}
+
 .footer-social * {
   padding-left: 10%;
   font-size: 30px;
@@ -256,6 +480,49 @@ ul {
   padding-bottom: 20px;
 }
 
+.promoContainer {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 30vh 30vh;
+}
+
+#product1 {
+  grid-column: 1;
+  grid-row: 1;
+  background-image: url("../images/fondo1.png");
+  color: white;
+  justify-content: flex-end;
+}
+
+.promoInfo {
+  width: 40%;
+}
+
+.promoInfo h2 {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+#product2 {
+  grid-column: 2;
+  grid-row: 1;
+  justify-content: flex-end;
+  background-image: url("../images/fondo2.jpeg");
+  color: white;
+}
+
+#product3 {
+  grid-column: 1/3;
+  grid-row: 2;
+  justify-content: flex-start;
+  background-image: url("../images/fondo3.png");
+  color: black;
+}
+
+#product3 .promoInfo {
+  margin-left: 5%;
+}
+
 @media (min-width: 768px) {
   body {
     font-family: "Montserrat";
@@ -267,16 +534,13 @@ ul {
     background-color: #000;
   }
   .ss-container {
-    float: right;
-    height: 20px;
-    margin-top: 60px;
+    height: auto;
     display: flex;
   }
   .cartContainer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 40px;
   }
   .ss-icon {
     margin-left: 5px;
@@ -286,12 +550,17 @@ ul {
   }
   .ss-nav-bar {
     display: flex;
+    width: 100%;
+    background-color: red;
   }
   .ss-search-bar {
-    width: auto;
-    height: 30px;
+    width: 60%;
+    height: 50px;
+    padding-left: 20px;
     border-radius: 10px;
     padding-right: 15px;
+    outline: none;
+    border: none;
   }
   .ss-container i {
     padding-right: 15px;
@@ -302,20 +571,45 @@ ul {
   /* Barra de navegacion*/
   .ss-nav-bar {
     background-color: black;
-    margin-left: 50px;
-    margin-right: 50px;
+    height: 5vh;
+  }
+  .ss-nav-bar nav{
+    padding: 10px 0;
+    margin-left: 2vw;
+  }
+  .ss-nav-bar nav ul{
+    display: flex;
+    padding: 0;
+  }
+  .ss-nav-bar nav ul > li{
+    margin-right: 20px;
   }
   .ss-nav-bar nav a {
     color: white;
     text-decoration: none;
     padding: 8px 8px;
     font-size: 1rem;
+
+    
+  }
+
+  @keyframes navHover {
+    0%   {background-color:black;color: white;}
+    25%  {background-color:black;color: white;}
+    50%  {background-color:gray;color: white;}
+    75%  {background-color: gainsboro;color: white;}
+    100% {background-color:white;color: black; }
   }
   .ss-nav-bar nav a:hover {
     background-color: white;
-    color: darkgray;
-    border-radius: 15px;
+    color: black;
+    border-radius: 10px;
+    animation-name: navHover;
+    animation-duration: 0.2s;
   }
+
+  
+
   .product {
     z-index: 100;
   }
