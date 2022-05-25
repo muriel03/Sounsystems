@@ -22,10 +22,11 @@ const controller = {
             res.render('./products/listProducts', {products})
         })
     },
-    shoppingCart: (req, res) => {
+    /*shoppingCart: (req, res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         res.render('./products/shoppingCart', { products })
-    },
+    },*/
+    
     login: (req, res) => res.render('./user/login'),
     register: (req, res) => res.render('./user/register'),
     productDetail: (req, res) => {
