@@ -9,14 +9,14 @@ const controller = {
   register: (req, res) => {
     db.TypeUser.findAll()
     .then((typeUser)=>{
-     let nameTypeUser =[];
-     typeUser.forEach(element=> {
-       nameTypeUser.push(element.name);       
-     });   
-        return res.render("./user/register", {category:nameTypeUser});  
+    let nameTypeUser =[];
+    typeUser.forEach(element=> {
+      nameTypeUser.push(element.name);
+    });
+        return res.render("./user/register", {category:nameTypeUser});
     })
-        
-    
+
+
   },
   proccesRegister: (req, res) => {
     const resultValidation = validationResult(req);
