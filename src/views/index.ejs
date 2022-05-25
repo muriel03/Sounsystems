@@ -1,76 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoundSystem</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://kit.fontawesome.com/eb0bcfcb68.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Montserrat&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../public/css/normalize.css">
-    <link rel="icon" href="images/favicommm.svg">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoundSystem</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/eb0bcfcb68.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&family=Montserrat&family=Roboto:ital,wght@1,100&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../public/css/normalize.css">
+  <link rel="icon" href="images/favicommm.svg">
 </head>
+
 <body>
-  
+
   <%- include('partials/header') %>
 
     <main>
-          <div class="banner">
-            <div class="capa"></div>
-            <div class="info">
-              <h1>Bienvenidos a SoundSystem</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, nostrum? Repellendus illum ipsam quis, ab repudiandae possimus, omnis enim consequatur perspiciatis iusto reiciendis molestias accusantium similique dignissimos iure commodi accusamus.</p>
-              <a href="">Leer mas</a>
-            </div>
-          </div>
-        <section class="cartContainer">
-            <h1>Productos Destacados</h1>
-            <% for(i = 0; i < products.length; i++) { %>
-            <a href="productDetail"><section class="product">
+      <div class="banner">
+        <div class="capa"></div>
+        <div class="info">
+          <h1>Bienvenidos a SoundSystem</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, nostrum? Repellendus illum ipsam quis, ab
+            repudiandae possimus, omnis enim consequatur perspiciatis iusto reiciendis molestias accusantium similique
+            dignissimos iure commodi accusamus.</p>
+          <a href="">Leer mas</a>
+        </div>
+      </div>
+      <section class="cartContainer">
+        <h1>Productos Destacados</h1>
+        <% for(i=0; i < products.length; i++) { %>
+          <a href="productDetail">
+            <section class="product">
               <div class="imgContainer">
                 <img src="images/<%= products[i].img %>" alt="<%= products[i].name %>" />
               </div>
               <div class="productInfo">
-                <h3><%= products[i].name %></h3>
-                <h4><%= products[i].category %></h4>
+                <h3>
+                  <%= products[i].name %>
+                </h3>
+                <h4>
+                  <%= products[i].category %>
+                </h4>
               </div>
-            </a></section>
-            <% } %>
-          </section>
-          <section class="container">
-            <section class="container-info">
-              <form action="" name="payment">
-                  <h2>Los audifonos que estan en boca de todos</h2>
-                  <p>Bose Noise cancelling headphones 700</p>
-                  <button type="submit">Compralos Aca</button>
-              </form>
-            </section>
-          </section>
-          <section class="container-1">
-            <section class="container-info">
-              <form action="" name="payment">
-                <h2>Los audifonos que estan en boca de todos</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, consequatur tempora. Doloremque, dolorum. Incidunt soluta labore harum est. Accusamus laborum aspernatur ratione voluptate rerum recusandae natus debitis explicabo iste facere.</p>
-                <button type="submit">Compralos Aca</button>
-              </form>
-            </section>
-          </section>
-          <section class="container-2">
-            <section class="container-info">
-              <form action="" name="payment">
-                <h2>Headser Gamer Quantum</h2>
-                <p>Sumergete en tu juego con el sonido inmersivo JBL y gana tus batallas. !LLevalo hoy!
-                  Auriculares integrales para gaming en PC sin cables y de alto rendimiento con sonido envolvente y dual de ajuste juego-chat.
-                </p>
-                <button type="submit">Compralos Aca</button>
-              </form>
-            </section>
-          </section>
+          </a>
+      </section>
+      <% } %>
+        </section>
+        <div class="promoContainer">
+          <div id="product1" class="verticalCenter">
+            <div class="promoInfo">
+              <h2>Bose Noise cancelling headphones 700</h2>
+              <p>Los audifonos que estan en boca de todos</p>
+              <button class="buyPromo">Buy here</button>
+            </div>
+
+          </div>
+          <div id="product2" class="verticalCenter">
+            <div class="promoInfo">
+              <h2>Xiaomi EarBuds v6</h2>
+              <p>Un nuevo universo auditivo para tus oidos</p>
+              <button class="buyPromo">Buy here</button>
+            </div>
+          </div>
+          <div id="product3" class="verticalCenter">
+            <div class="promoInfo">
+              <h2>Headset Gamer Quantum</h2>
+              <p>Sumergete en tu juego con el sonido inmersivo JBL y gana tus batallas</p>
+              <button class="buyPromo">Buy here</button>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/573104626151" target="_blank" class="whatsapp">
+          <img src="images/whatsapp.19d15ab518011dcc38826fe616542219.svg" alt="">
+        </a>
     </main>
-    
+
     <%- include('partials/footer') %>
 </body>
+
 </html>

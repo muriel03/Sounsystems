@@ -159,9 +159,7 @@ ul {
     background-color: #000;
   }
   .ss-container {
-    float: right;
     height: 20px;
-    margin-top: 60px;
     display: flex;
   }
   .cartContainer {
@@ -194,8 +192,6 @@ ul {
   /* Barra de navegacion*/
   .ss-nav-bar {
     background-color: black;
-    margin-left: 50px;
-    margin-right: 50px;
   }
   .ss-nav-bar nav a {
     color: white;
