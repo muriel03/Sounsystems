@@ -56,8 +56,8 @@ const controller = {
             category: req.body.category,
             price: req.body.productPrice,
             discount: req.body.discount,
-            categoryProduct_id: 1,
-            brand_id: 1
+            categoryProduct_id: req.body.category,
+            brand_id: req.body.brand
         }).catch(error =>{
             console.log(error);
         });
@@ -84,7 +84,7 @@ const controller = {
             price: req.body.productPrice,
             discount: req.body.discount,
             categoryProduct_id: req.body.category,
-            brand_id: 1
+            brand_id: req.body.brand
         },{
             where: {
                 id: idParam

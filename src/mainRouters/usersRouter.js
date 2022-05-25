@@ -58,7 +58,7 @@ const usersController = require("../controllers/usersController");
 router.get("/register", guesMiddleware, usersController.register);
 
 //Procesar el registro
-router.post("/register", uploadFile.single("avatar"), 
+router.post("/register", uploadFile.single("avatar"),
             validations, usersController.proccesRegister);
 
 //formulario de login
