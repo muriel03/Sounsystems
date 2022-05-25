@@ -19,7 +19,8 @@ router.get("/search", mainController.search);
 router.get("/shoppingCart", mainController.shoppingCart);
 //router.get('/login', mainController.login);
 //router.get('/register', mainController.register);
-router.get("/productDetail", mainController.productDetail);
+router.get('/listProducts', mainController.listProducts);
+router.get("/productDetail/:id", mainController.productDetail);
 router.get("/newProduct", mainController.newProduct);
 router.post(
   "/newProduct",
@@ -33,4 +34,5 @@ router.put(
   mainController.updateProduct
 );
 
+router.delete('/delete/:id', mainController.deleteProduct);
 module.exports = router;

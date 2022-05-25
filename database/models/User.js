@@ -6,23 +6,27 @@ module.exports = (sequelize, DataTypes)=>{
             type: DataTypes.INTEGER,
             primaryKey: true,
             auntIncrement: true,
-        }, 
+        },
         fullName:{
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         email: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         password: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         avatar:{
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         typeUser_id:{
-            type: DataTypes.INTEGER
-        },     
- 
+            type: DataTypes.INTEGER,
+        }
+
     };
 
     let config = {

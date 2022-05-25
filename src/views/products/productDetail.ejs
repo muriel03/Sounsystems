@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail</title>
-<!--     <link rel="stylesheet" href="css/styles.css">
- -->    <link rel="stylesheet" href='css/stylesProduct.css'>
+    <link rel="stylesheet" href='/css/stylesProduct.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -14,80 +13,27 @@
     <link rel="stylesheet" href="../public/css/normalize.css">
     </head>
 <body>
-    <header>
-        <a href="/"><img src="images/logo-SoundSystem.jpeg" alt="" class="ss-icon"></a>
-        <div class="ss-container">
-            <input type="search" placeholder="Search" class="ss-search-bar">
-            <i class="fa fa-search"></i>
-            <a href="login"><i class="fa fa-user"></i></a>
-            <a href="shoppingCart"><i class="fa fa-cart-plus"></i></a> 
-        </div>
-        <div class="ss-nav-bar">
-            <nav>
-              <a href="/">Home</a>
-              <a href="#">Pruductos Nuevos</a>
-              <a href="#">Audífonos</a>
-              <a href="#">Speaker</a>
-              <a href="#">Altavoces</a>
-              <a href="#">Contact us</a>
-            </nav>
-        </div>  
-    </header>
+  <!-- Header -->
+  <%- include('../partials/header') %>
     <section class="inicio" id="inicio">
+
         <div class="content">
-            <h3>SoundTouch <span>Bose Smart</span></h3>
+
+            <h3><%= product.name %></span></h3>
             <ul class="description">
-                <li>Funciona con Alexa para control de voz (el dispositivo Alexa se vende por separado), Control remoto: 4.5 H x 1.75 W x 0.5 D pulgadas</li>
-                <li>El diseño acústico patentado ofrece un gran rendimiento de un altavoz compacto, perfecto para dormitorios y cocinas</li>
-                <li>Funciona con dispositivos Wi-Fi y Bluetooth para reproducir servicios de música como Amazon Music, Spotify, estaciones de radio por Internet y su biblioteca de música almacenada; Compatibilidad de red inalámbrica 802.11 b/g/n</li>
-                <li>Cuenta con seis presintonías para tus podcasts, estaciones y listas de reproducción favoritas, y una pantalla OLED para la hora, la canción, la información de la estación y más. Formatos de audio compatibles: MP3, WMA, AAC, FLAC, Apple Lossless</li>
-                <li>Parte de una familia completa de altavoces inalámbricos para varias habitaciones diseñados para crecer contigo. Consumo de energía: 90 W</li>
+                <p><%= product.description %></p>
                 <li id="comprar"> <a href="shoppingCart" class="btn">Agregar al Carrito</a></li>
+                <!-- <form action="/delete/:<%= product.img %>">
+                  <li id="comprar"> <a href="shoppingCart" class="btn">Eliminar Producto</a></li>
+                </form> -->
             </ul>
-            <img class="img-product" src="images/SoundTouch20Bose.jpg" alt="">
-           </div>   
-            </div>
+            <img class="img-product" src="images/<%= product.img %>" alt="">
+          </div>
+        </div>
         </section>
         </div>
     </section>
-    <footer class="footer">
-        <div class="footer-start">
-          <div class="footer-social">
-            <a href="https://es-la.facebook.com/">
-              <i class="fab fa-facebook"></i>
-            </a>
-  
-            <a href="https://www.instagram.com/">
-              <i class="fab fa-instagram-square"></i>
-            </a>
-  
-            <a href="https://web.whatsapp.com/">
-              <i class="fab fa-whatsapp-square"></i>
-            </a>
-          </div>
-  
-          <div class="termsAndConditions">
-            <ul class="first">
-              <li>Sistemas de audio para vehículos</li>
-              <li>Parlantes para exteriores</li>
-              <li>Sistemas profesionales</li>
-              <li>Dispositivos para el gimnasio</li>
-              <li>Dispositivos para el trabajo</li>
-            </ul>
-            <ul>
-              <li class="second">Soporte</li>
-              <li>Comunicate con nosotros</li>
-              <li>Donde estamos úbicados</li>
-              <li>Acerca de nosotros</li>
-              <li>Trabaja con nosotros</li>
-            </ul>
-            <ul class="third">
-              <li>Políticas de privacidad</li>
-              <li>Términos y condiciones</li>
-              <li>Aviso de cookies</li>
-            </ul>
-          </div>
-        </div>
-      </footer> 
+    <!-- Footer -->
+    <%- include('../partials/footer') %>
 </body>
 </html>

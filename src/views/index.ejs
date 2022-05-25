@@ -22,21 +22,18 @@
   <%- include('partials/header') %>
 
     <main>
-      <div class="banner">
-        <div class="capa"></div>
-        <div class="info">
-          <h1>Bienvenidos a SoundSystem</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, nostrum? Repellendus illum ipsam quis, ab
-            repudiandae possimus, omnis enim consequatur perspiciatis iusto reiciendis molestias accusantium similique
-            dignissimos iure commodi accusamus.</p>
-          <a href="">Leer mas</a>
-        </div>
-      </div>
-      <section class="cartContainer">
-        <h1>Productos Destacados</h1>
-        <% for(i=0; i < products.length; i++) { %>
-          <a href="productDetail">
-            <section class="product">
+          <div class="banner">
+            <div class="capa"></div>
+            <div class="info">
+              <h1>Bienvenidos a SoundSystem</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, nostrum? Repellendus illum ipsam quis, ab repudiandae possimus, omnis enim consequatur perspiciatis iusto reiciendis molestias accusantium similique dignissimos iure commodi accusamus.</p>
+              <a href="">Leer mas</a>
+            </div>
+          </div>
+        <section class="cartContainer">
+            <h1>Productos Destacados</h1>
+            <% for(i = 0; i < products.length; i++) { %>
+            <a href="productDetail/<%= products[i].id %>"><section class="product">
               <div class="imgContainer">
                 <img src="images/<%= products[i].img %>" alt="<%= products[i].name %>" />
               </div>

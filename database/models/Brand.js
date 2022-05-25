@@ -1,15 +1,14 @@
 module.exports = (sequelize, DataTypes)=>{
     let alias = "Brand";
-
     let cols = {
         id:{
             type: DataTypes.INTEGER,
             primaryKey: true,
-            autotIncrement: true, 
+            autotIncrement: true,
         },
         name: {
             type: DataTypes.STRING,
-        }, 
+        },
     };
 
     let config = {
@@ -22,4 +21,4 @@ module.exports = (sequelize, DataTypes)=>{
     const Brand = sequelize.define(alias, cols, config);
 
     return Brand;
-}
+};
