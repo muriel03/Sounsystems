@@ -3,13 +3,13 @@ module.exports = (sequelize, DataTypes)=>{
 
     let cols ={
         id:{
-            type: DataTypes.INTEGER,      
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        name: { 
+        name: {
             type: DataTypes.STRING,
-          },
+        },
     };
 
     let congif = {
@@ -19,14 +19,14 @@ module.exports = (sequelize, DataTypes)=>{
         updatedAt: false,
     };
 
-    const Category = sequelize.define(alias, cols, congif); 
+    const Category = sequelize.define(alias, cols, congif);
 
-   /* CategoryProduct.associate = function(models){ 
-        CategoryProduct.hasMany(models.Product,{
-            as: "products",
-            foreingKey: "idcategorysProducts"
+    /* Category.associate = function(models){
+        Category.hasMany(models.Product,{
+            as: "Product",
+            foreingKey: "category_id"
         })
-    }*/
+    } */
 
     return Category;
 };

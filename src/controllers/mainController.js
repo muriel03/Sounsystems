@@ -36,7 +36,7 @@ const controller = {
         })
     },
     newProduct: (req, res) => {
-        let category = db.CategoryProduct.findAll();
+        let category = db.Category.findAll();
         let brands = db.Brand.findAll();
 
         Promise.all([brands, category])
@@ -49,13 +49,14 @@ const controller = {
 
     createProduct: (req, res) => {
         db.Product.create({
+            id: 1,
             name: req.body.productName,
             description: req.body.description,
             img: req.file.filename,
             category: req.body.category,
             price: req.body.productPrice,
             discount: req.body.discount,
-            categoryProduct_id: req.body.category,
+            category_id: req.body.category,
             brand_id: req.body.brand
         }).catch(error =>{
             console.log(error);
@@ -66,7 +67,7 @@ const controller = {
     editProduct: (req, res) => {
         let idParam = Number(req.params.id);
         let products = db.Product.findByPk(idParam)
-        let category = db.CategoryProduct.findAll();
+        let category = db.Category.findAll();
         let brands = db.Brand.findAll();
 
         Promise.all([products, category, brands]).then(function([productToEdit, categoryList, brandList]){
@@ -82,7 +83,7 @@ const controller = {
             category: req.body.category,
             price: req.body.productPrice,
             discount: req.body.discount,
-            categoryProduct_id: req.body.category,
+            category_id: req.body.category,
             brand_id: req.body.brand
         },{
             where: {
