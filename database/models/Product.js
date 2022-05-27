@@ -26,10 +26,12 @@ module.exports = (sequelize, DataTypes)=>{
             type: DataTypes.DECIMAL
         },
         category_id:{
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            allowNull: false
         },
         brand_id:{
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     }
     let config = {
@@ -41,12 +43,12 @@ module.exports = (sequelize, DataTypes)=>{
 
     const Product = sequelize.define(alias, cols, config);
 
-    Product.associate = (models)=>{
-        Product.belongsTo(models.CategoryProduct,{
-            as: "categoryProduct",
+    /* Product.associate = (models)=>{
+        Product.belongsTo(models.Category,{
+            as: "Category",
             foreignKey: "category_id"
         })
-    }
+    } */
 
     return Product;
 

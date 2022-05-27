@@ -20,7 +20,7 @@ let categoryRouter = {
         })
         .catch(error=>{
             return res.send(error)
-        });        
+        });
     },
     edit:function(req, res){
         db.Category.update({
