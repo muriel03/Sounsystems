@@ -39,7 +39,7 @@ header {
   background-color: #000;
   height: 200px;
   display: flex;
-	align-items: center;
+  align-items: center;
 }
 .ss-icon {
   margin-left: 50px;
@@ -57,14 +57,14 @@ header {
 
 .profileCont > img {
   height: 50px;
-	width: 50px;
-	border-radius: 50%;
+  width: 50px;
+  border-radius: 50%;
 }
 
 .profileCont > h2 {
   color: white;
-	padding: 10px 0;
-	margin-left: 15px;
+  padding: 10px 0;
+  margin-left: 15px;
   margin-right: 15px;
 }
 
@@ -76,20 +76,20 @@ header {
 }
 
 @keyframes dropdownFadeIn {
-	0% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+  }
 
-	100% {
-		opacity: 1;
-	}
+  100% {
+    opacity: 1;
+  }
 }
 
 .userDropdown {
   width: 125px;
-	position: absolute;
-	transform: translate(65px, 45px);
-	color: black;
+  position: absolute;
+  transform: translate(65px, 45px);
+  color: black;
   background-color: white;
   visibility: hidden;
   padding: 10px;
@@ -103,7 +103,6 @@ header {
 }
 
 @keyframes liHover {
-  
 }
 
 .userDropdown li:hover {
@@ -115,19 +114,19 @@ header {
   margin: 10px 0;
 }
 
-.visible{
+.visible {
   visibility: visible;
 }
 
-.searchBar{
+.searchBar {
   display: flex;
-	align-items: center;
-	justify-content: center;
+  align-items: center;
+  justify-content: center;
   position: relative;
   width: 65%;
 }
 
-.searchBar i{
+.searchBar i {
   position: absolute;
   right: 21%;
 }
@@ -135,9 +134,9 @@ header {
 .ss-container {
   display: flex;
   width: 25%;
-	justify-content: right;
-	margin-right: 0px;
-	padding-right: 30px;
+  justify-content: right;
+  margin-right: 0px;
+  padding-right: 30px;
   height: 50px;
   align-items: center;
   background-color: #000;
@@ -145,18 +144,28 @@ header {
 
 .registerBtn {
   border-radius: 5px;
-	padding: 10px;
-	border: none;
-	text-align: center;
-	background: green;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  background: green;
 }
 
 @keyframes registerHover {
-  0% {background-color: #21803a;}
-  25% {background-color: #309c4d;}
-  50% {background-color: #58cc77;}
-  75% {background-color: #76db91;}
-  100% {background-color: #68ed8c;}
+  0% {
+    background-color: #21803a;
+  }
+  25% {
+    background-color: #309c4d;
+  }
+  50% {
+    background-color: #58cc77;
+  }
+  75% {
+    background-color: #76db91;
+  }
+  100% {
+    background-color: #68ed8c;
+  }
 }
 
 .registerBtn:hover {
@@ -167,20 +176,29 @@ header {
 
 .loginBtn {
   border-radius: 5px;
-	padding: 10px;
-	border: none;
-	text-align: center;
-	background: #5565f2;
+  padding: 10px;
+  border: none;
+  text-align: center;
+  background: #5565f2;
 }
 
 @keyframes loginHover {
-  0% {background-color: #5565f2;}
-  25% {background-color: #7784f7;}
-  50% {background-color: #7784f7;}
-  75% {background-color: #858ccc;}
-  100% {background-color: #a9afeb;}
+  0% {
+    background-color: #5565f2;
+  }
+  25% {
+    background-color: #7784f7;
+  }
+  50% {
+    background-color: #7784f7;
+  }
+  75% {
+    background-color: #858ccc;
+  }
+  100% {
+    background-color: #a9afeb;
+  }
 }
-
 
 .loginBtn:hover {
   background-color: #a9afeb;
@@ -188,13 +206,15 @@ header {
   animation-duration: 0.1s;
 }
 
-.registerBtn > a,.loginBtn > a {
+.registerBtn > a,
+.loginBtn > a {
   text-decoration: none;
-	color: white;
+  color: white;
   font-size: 1rem;
 }
 
-.ss-container > a, .ss-container > button{
+.ss-container > a,
+.ss-container > button {
   margin-right: 10px;
 }
 /* Banner */
@@ -293,7 +313,7 @@ header {
 }
 .container {
   background-color: var(--blackColor);
-  background-image: url("../images/fondo1.png");
+  background-image: url("../images/fondo3.png");
   background-size: 100% 100%;
   padding: 35px 7%;
   width: 100%;
@@ -330,7 +350,7 @@ header {
 }
 .container-1 {
   background-color: var(--blackColor);
-  background-image: url("../images/fondo2.jpeg");
+  background-image: url("../images/fondo3.png");
   background-size: 100% 100%;
   padding: 35px 7%;
   width: 100%;
@@ -352,7 +372,7 @@ header {
 /* Container-2 */
 .container-2 {
   background-color: var(--blackColor);
-  background-image: url("../images/fondo3.png");
+  background-image: url("../images/fondo1.png");
   background-size: 100% 100%;
   height: 200px;
   width: 100%;
@@ -440,11 +460,12 @@ header {
   margin-right: 20px;
 }
 
-#footerCategories, #contact{
+#footerCategories,
+#contact {
   font-size: small;
 }
 
-#socials a{
+#socials a {
   color: white;
 }
 
@@ -573,15 +594,15 @@ ul {
     background-color: black;
     height: 5vh;
   }
-  .ss-nav-bar nav{
+  .ss-nav-bar nav {
     padding: 10px 0;
     margin-left: 2vw;
   }
-  .ss-nav-bar nav ul{
+  .ss-nav-bar nav ul {
     display: flex;
     padding: 0;
   }
-  .ss-nav-bar nav ul > li{
+  .ss-nav-bar nav ul > li {
     margin-right: 20px;
   }
   .ss-nav-bar nav a {
@@ -589,16 +610,29 @@ ul {
     text-decoration: none;
     padding: 8px 8px;
     font-size: 1rem;
-
-    
   }
 
   @keyframes navHover {
-    0%   {background-color:black;color: white;}
-    25%  {background-color:black;color: white;}
-    50%  {background-color:gray;color: white;}
-    75%  {background-color: gainsboro;color: white;}
-    100% {background-color:white;color: black; }
+    0% {
+      background-color: black;
+      color: white;
+    }
+    25% {
+      background-color: black;
+      color: white;
+    }
+    50% {
+      background-color: gray;
+      color: white;
+    }
+    75% {
+      background-color: gainsboro;
+      color: white;
+    }
+    100% {
+      background-color: white;
+      color: black;
+    }
   }
   .ss-nav-bar nav a:hover {
     background-color: white;
@@ -607,8 +641,6 @@ ul {
     animation-name: navHover;
     animation-duration: 0.2s;
   }
-
-  
 
   .product {
     z-index: 100;

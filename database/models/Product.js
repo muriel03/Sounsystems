@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes)=>{
         discount:{
             type: DataTypes.DECIMAL
         },
-        categoryProduct_id:{
+        category_id:{
             type: DataTypes.INTEGER
         },
         brand_id:{
@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes)=>{
     Product.associate = (models)=>{
         Product.belongsTo(models.CategoryProduct,{
             as: "categoryProduct",
-            foreignKey: "categoryProduct_id"
+            foreignKey: "category_id"
         })
     }
 

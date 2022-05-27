@@ -11,22 +11,25 @@
 </head>
 
 <body>
-  <main>
-    <div class="main-top">
-      <h1>Detail Brands<%= brand.name %>
-      </h1>
-    </div>
-    <div class="main-bottom">
-      <form action="/brands/edit/<%= brand.id%>?_method=PUT" method="POST">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" value="<%=brand.name %>" />
-        <div class="from-bottom">
-          <button type="submit">Guardar</button>
-          <button type="reset">Cancelar</button>
-        </div>
-      </form>
-    </div> 
-  </main>
+  <%- include ('../partials/header') %>
+    <main>
+      <div class="main-top">
+        <h1>Detail Brands<%= brand.name %>
+        </h1>
+      </div>
+      <div class="main-bottom">
+        <form action="/brands/edit/<%= brand.id%>?_method=PUT" method="POST">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" value="<%=brand.name %>" />
+          <div class="from-bottom">
+            <button type="submit">Guardar</button>
+            <button type="reset">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <%- include('../partials/footer')%>
+
 </body>
 
 </html>

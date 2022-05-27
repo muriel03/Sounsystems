@@ -21,7 +21,7 @@ const validations = [
     .isEmail()
     .withMessage("Debes de ingresar un formato de correo válido"), 
   body("password").notEmpty().withMessage("Tienes que ingresar una contreseña"),
-  body("category").notEmpty().withMessage("Debes de elegir el tipo de cliente"),
+  body("typeuser_id").notEmpty().withMessage("Debes de elegir el tipo de cliente"),
   body("avatar").custom((value, { req }) => {
     let file = req.file;
     let acceptedExtension = [".jpg", ".png", ".gif"];

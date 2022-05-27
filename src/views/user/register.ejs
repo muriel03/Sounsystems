@@ -65,16 +65,15 @@
 
           <label class="item">
             <b>Categoria:</b>
-            <select name="category" id="category"
+            <select name="typeuser_id" id="category"
               class="item-input <%= locals.errors && errors.category ? 'is-invalid' : null %>">
 
-              <option value="">Elija una opción</option>
-              <% let categories=['Mayorista', 'Dropshipping' , 'Detal' ] %>
+              <option value="">Elija una opción</option>              
 
-                <% for(const oneCategory of categories ) { %>
-                  <option value="<%= oneCategory %>" <%=locals.oldData && (oneCategory===oldData.category)? 'selected' :
+                <% for(const oneCategory of category ) { %>
+                  <option value="<%= oneCategory.id %>" <%=locals.oldData && (oneCategory.name===oldData.category)? 'selected' :
                     null %>
-                    > <%= oneCategory %>
+                    > <%= oneCategory.name %>
                   </option>
                   <% } %>
             </select>

@@ -1,3 +1,7 @@
+.main-list-brands {
+  height: 40vh;
+  margin-top: 10vh;
+}
 .top h1,
 .main-top h1 {
   text-align: center;
@@ -27,12 +31,12 @@
 .button-down i {
   margin: 0px 5px;
 }
-.button-down form{
+.button-down form {
   display: inline;
 }
-.button-down form button{
-    border: 0;
-    background-color: transparent;
+.button-down form button {
+  border: 0;
+  background-color: transparent;
 }
 .fa-trash {
   color: red;
