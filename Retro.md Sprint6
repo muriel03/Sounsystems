@@ -1,0 +1,8 @@
+Proyecto integrador para Digital House; Grupo 04.
+
+Teniendo en cuenta las dificultades que hemos tenido durante el proyecto integrador hemos mejorado en la consecución de retos y mejoras para el desarrollo del proyecto,
+se ha buscado ayudas con algunos compañeros de otros grupos que nos han aclarado algunas dudas respecto a temas puntuales, este sprint lo entregamos con mejoras en las 
+vistas de index, profile, users, /users/edit, /users/profile, de igual forma tenemos 3 tablas intermedias (brands, category y typeUser) las cuales hacen su respectivo CRUD
+completo de igual forma product edita, crea y lista nuevos productos, hay mejoras visuales en las vistas con estilos ccs. 
+Hemos estado comprometidos con el desarrollo del trabajo los dos partipantes y mojorado nuestro compromiso. 
+
