@@ -1,0 +1,37 @@
+para brands
+/brands/list
+/brands/detail/2
+/brands/add
+
+
+para tipos de usuarios
+/type/list
+/type/detail/3
+/type/add
+
+para categoria de productos
+/category/list
+/category/detail/1
+/category/add
+
+para usuarios desde el boton de register para crear un usuario nuevo 
+para editar un usuario, desde  
+/users/profile 
+en la parte de abajo hay un link con un icono que permite ir a 
+/users/detail/id
+y editar el usuario 
+No se hizo la parte de eliminar usuario
+
+para para productos desde la barra de navegación "new Products"
+NOTA: falta middleware para retringir la cración de nuevos productos a
+cualquier usuario. 
+
+para lista los productos desde la barra de navegacion "Product List"
+
+para editar un producto 
+/editProduct/1
+
+todas las rutas son antecedidas por 
+http://localhost:3030
+
+

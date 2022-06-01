@@ -50,7 +50,6 @@ const controller = {
 
     createProduct: (req, res) => {
         db.Product.create({
-            id: 1,
             name: req.body.productName,
             description: req.body.description,
             img: req.file.filename,

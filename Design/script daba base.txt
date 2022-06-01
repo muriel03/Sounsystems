@@ -1,0 +1,84 @@
+CREATE DATABASE  IF NOT EXISTS soundsystem;
+USE soundsystem;
+
+DROP TABLE IF EXISTS brand;
+
+CREATE TABLE brand (
+  id int NOT NULL AUTO_INCREMENT,
+  name varchar(20) DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO brand VALUES (1,'Sony'),(2,'Bosse'),(3,'Unbrand');
+
+DROP TABLE IF EXISTS category;
+CREATE TABLE category (
+  id int NOT NULL AUTO_INCREMENT,
+  name varchar(20) DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE typeuser (
+  id int NOT NULL AUTO_INCREMENT,
+  name varchar(20) DEFAULT NULL,
+  PRIMARY KEY (id)
+) ENGINE InnoDB DEFAULT CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS user;
+
+CREATE TABLE user (
+  id int NOT NULL AUTO_INCREMENT,
+  fullName varchar(50) NOT NULL,
+  email varchar(100) NOT NULL,
+  password varchar(100) NOT NULL,
+  avatar varchar(100) NOT NULL,
+  typeuser_id int NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (typeuser_id) REFERENCES typeuser (id)
+) ENGINE InnoDB DEFAULT CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS invoice;
+CREATE TABLE invoice (
+  id int NOT NULL AUTO_INCREMENT,
+  fecha date NOT NULL,
+  totalBuy int NOT NULL,
+  user_id int NOT NULL,
+  PRIMARY KEY (id),  
+  FOREIGN KEY (user_id) REFERENCES user (id)
+) ENGINE InnoDB DEFAULT CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS product;
+CREATE TABLE product (
+  id int NOT NULL AUTO_INCREMENT,
+  name varchar(50) NOT NULL,
+  description varchar(1000) NOT NULL,
+  img varchar(100) NOT NULL,
+  price int NOT NULL,
+  discount decimal(10,0) DEFAULT NULL,
+  category_id int DEFAULT NULL,
+  brand_id int DEFAULT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (brand_id) REFERENCES brand (id),
+  FOREIGN KEY (category_id) REFERENCES category (id)
+) ENGINE InnoDB DEFAULT CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS detailbuy;
+
+CREATE TABLE detailbuy (
+  id int NOT NULL AUTO_INCREMENT,
+  amount int NOT NULL,
+  tax decimal(10,0) DEFAULT NULL,
+  importUnitario int NOT NULL,
+  totalDetail int NOT NULL,
+  invoice_id int NOT NULL,
+  product_id int NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (product_id) REFERENCES product (id),
+  FOREIGN KEY (invoice_id) REFERENCES invoice (id)
+) ENGINE InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO typeuser VALUES (1,'Mayorista'),(2,'Detal'),(3,'Dropshipping');
+
+
+
+

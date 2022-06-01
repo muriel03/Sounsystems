@@ -1,0 +1,17 @@
+describe brand;
+describe category;
+describe detailbuy;
+describe invoice;
+describe product; 
+describe typeuser;
+describe user;
+
+select * from typeuser;
+select * from brand;
+
+INSERT INTO typeuser VALUES (1,'Mayorista'),(2,'Detal'),(3,'Dropshipping');
+insert into category (name) values("audio");
+
+select * from category;
+
+select * from user;
