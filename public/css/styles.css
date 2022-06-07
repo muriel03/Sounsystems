@@ -24,6 +24,11 @@ body {
 a {
   text-decoration: none;
 }
+.text-danger {
+  color: red;
+  border: 1px red solid;
+  margin-bottom: 2px;
+}
 
 /*Header*/
 .fa-search,

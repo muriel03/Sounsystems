@@ -28,6 +28,11 @@
           <h1>Edit product</h1>
           <label for="productName">Product name:</label>
           <input type="text" id="productName" name="productName" placeholder="info Product" value="<%= productToEdit.name %>" />
+          <% if (locals.errors && errors.name) { %>
+            <div class="text-danger">
+              <%= errors.name.msg %>
+            </div>
+          <% } %>
           <label for="description">Description:</label>
           <textarea
             name="description"
@@ -36,11 +41,21 @@
             rows="10"
             placeholder="info Product"
           ><%= productToEdit.description %></textarea>
+          <% if (locals.errors && errors.description) { %>
+            <div class="text-danger">
+              <%= errors.description.msg %>
+            </div>
+          <% } %>
           <label for="productImg" class="productImgLabel">Product images:</label>
           <input type="file" id="productImg" name="productImg" />
+          <% if (locals.errors && errors.img) { %>
+            <div class="text-danger">
+              <%= errors.img.msg %>
+            </div>
+          <% } %>
           <div>
             <h2>Category:</h2>
-            <select for="" name="category">
+            <select for="" name="category_id">
               <% for(let i = 0; i < categoryList.length; i++) {%>
                 <option value= "<%= categoryList[i].id %>"><%= categoryList[i].name %></option>
               <% } %>
@@ -48,16 +63,26 @@
           </div>
           <div>
             <h2>Brand:</h2>
-            <select for="" name="brand">
+            <select for="" name="brand_id">
               <% for(let i = 0; i < brandList.length; i++) {%>
                 <option value= "<%= brandList[i].id %>"><%= brandList[i].name %></option>
               <% } %>
             </select>
           </div>
           <label for="productPrice">Price:</label>
-          <input type="text" id="productPrice" name="productPrice" placeholder="info Product" value="<%= productToEdit.price %>" />
+          <input type="text" id="productPrice" name="price" value="<%= productToEdit.price %>" />
+          <% if (locals.errors && errors.price) { %>
+            <div class="text-danger">
+              <%= errors.price.msg %>
+            </div>
+          <% } %>
           <label for="discount">Discount:</label>
           <input type="number" id="discount" name="discount" min="0" max="99"  value="<%= productToEdit.discount %>"/>
+          <% if (locals.errors && errors.discount) { %>
+            <div class="text-danger">
+              <%= errors.discount.msg %>
+            </div>
+          <% } %>
           <button type="submit" >Edit product</button>
         </form>
         <div class="addImg  editImg"></div>
