@@ -79,3 +79,8 @@ form input {
 .from-bottom button:first-child {
   background-color: darkgray;
 }
+.msj_error{
+  color: red;
+  font-size: larger;
+  text-align: center;
+}

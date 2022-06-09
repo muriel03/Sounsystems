@@ -9,7 +9,7 @@ window.addEventListener('load', (e)=>{
     let category = document.querySelector('#category');
     let avatar = document.querySelector('#avatar');
 
-    //Ul de los errores
+    //Ul de los errores 
     let ulErrors = document.querySelector('ul.is-invalid');
 
     form.addEventListener('submit', (e)=>{
@@ -23,10 +23,14 @@ window.addEventListener('load', (e)=>{
             errors.push('Debes ingresar un email valido');
             email.classList.add('is-invalid');
         };
-        if(password.value == ''){
-            errors.push('Debes escribir una contraseña');
+        if(password.value.length < 8){
+            errors.push('Debes escribir con mas de 8 caracteres');
             password.classList.add('is-invalid');
         };
+        if(password.match(/\d/) ){
+            errors.push('Debes escribir una contraseña con al menos un numero');
+            password.classList.add('is-invalid');
+        }
         if(category.value == 'Elija una opcion'){
             errors.push('Debes seleccionar una categoria');
             category.classList.add('is-invalid');

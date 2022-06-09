@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head> 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css">    
     <link rel="stylesheet" href="/css/listaCategorias.css" />
     <script src="https://kit.fontawesome.com/e00c988d1a.js" crossorigin="anonymous"></script>
     <title>Agregar Categoria de Productos</title>
 </head>
 
 <body>
+    <%- include ('../partials/header') %>
     <main>
         <div class="main-top">
             <h1>Nueva Categoria de Productos</h1>
@@ -19,6 +21,8 @@
             <form action="/category/create" method="POST">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" />
+                <br/>
+                <small class="msj_error"></small>
                 <div class="from-bottom">
                     <button type="submit">Guardar</button>
                     <button type="reset">Cancelar</button>
@@ -26,6 +30,8 @@
             </form>
         </div>
     </main>
+    <script src="/js/categoryValidations.js"></script>
+    <%- include('../partials/footer')%>
 </body>
 
 </html>
