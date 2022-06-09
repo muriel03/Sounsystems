@@ -22,6 +22,7 @@
 
     <article class="form-register">
       <h2 class="title-register">Formulario de Registro</h2>
+      <ul class="is-invalid"></ul>
 
       <form method="POST" action="/users/register" class="form-user" enctype="multipart/form-data">
 
@@ -30,7 +31,7 @@
             <b>Nombre completo:</b>
             <input type="text" name="fullName"
               class="item-input <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
-              value="<%= locals.oldData ? oldData.fullName : null %>" />
+              value="<%= locals.oldData ? oldData.fullName : null %>" id="name" />
             <% if (locals.errors && errors.fullName) { %>
               <div class="text-danger">
                 <%= errors.fullName.msg%>
@@ -42,7 +43,7 @@
             <b>Correo electrónico:</b>
             <input type="text" name="email"
               class="item-input <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-              value="<%= locals.oldData ? oldData.email : null %>" />
+              value="<%= locals.oldData ? oldData.email : null %>" id="email"/>
             <% if (locals.errors && errors.email) { %>
               <div class="text-danger">
                 <%= errors.email.msg%>
@@ -55,7 +56,7 @@
           <label class="item">
             <b>Password:</b>
             <input type="password" name="password"
-              class="item-input  <%= locals.errors && errors.password ? 'is-invalid' : null %>" />
+              class="item-input  <%= locals.errors && errors.password ? 'is-invalid' : null %>" id="password" />
             <% if (locals.errors && errors.password) { %>
               <div class="text-danger">
                 <%= errors.password.msg%>
@@ -68,7 +69,7 @@
             <select name="typeuser_id" id="category"
               class="item-input <%= locals.errors && errors.category ? 'is-invalid' : null %>">
 
-              <option value="">Elija una opción</option>              
+              <option value="">Elija una opción</option>
 
                 <% for(const oneCategory of category ) { %>
                   <option value="<%= oneCategory.id %>" <%=locals.oldData && (oneCategory.name===oldData.category)? 'selected' :
@@ -89,7 +90,7 @@
         <div class="third-item">
           <label class="item">
             <b>Imagen de perfil:</b>
-            <input type="file" name="avatar" />
+            <input type="file" name="avatar" id="avatar"/>
             <% if (locals.errors && errors.avatar) { %>
               <div class="text-danger">
                 <%= errors.avatar.msg%>
@@ -103,7 +104,7 @@
         </div>
       </form>
     </article>
-
+    <script src="/js/usersValidations.js"></script>
     <!--footer-->
     <%- include('../partials/footer') %>
 </body>

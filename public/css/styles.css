@@ -29,6 +29,13 @@ a {
   border: 1px red solid;
   margin-bottom: 2px;
 }
+.is-valid{
+  color: green;
+}
+.is-invalid{
+  color: red;
+  list-style-type: circle;
+}
 
 /*Header*/
 .fa-search,
