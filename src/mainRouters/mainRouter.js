@@ -5,7 +5,7 @@ const multer = require("multer");
 const mainController = require("../controllers/mainController");
 const validations = require('../middlewares/validations');
 
-const storage = multer.diskStorage({
+const storage = multer.diskStorage({ 
   destination: (req, file, cb) => {
     cb(null, "./public/images");
   },
