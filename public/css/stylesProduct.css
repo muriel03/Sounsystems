@@ -105,7 +105,7 @@ header {
 
 .img-product {
   width: 45vw;
-  display: inline-block;
+  /*display: inline-block;*/
   padding: 1px;
   align-items: center;
   margin-top: 50px;
@@ -167,12 +167,11 @@ h3 {
 .btn {
   display: inline-block;
   align-items: center;
-  margin-top: 1rem;
   margin-left: 5%;
-  padding: 0.8rem 3rem;
-  border-radius: 5rem;
+  padding: 0.8rem 1rem;
+  border-radius: 2rem;
   background-color: #5390d9;
-  font-size: 1.8rem;
+  font-size: 1rem;
   color: black;
   cursor: pointer;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
