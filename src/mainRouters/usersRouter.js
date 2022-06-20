@@ -9,6 +9,7 @@ const multer = require("multer");
 //middlewares
 const guesMiddleware = require("../middlewares/guesMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
+const userLoggedMiddleware = require("../middlewares/userLoggeMiddlewares");
 
 const { body } = require("express-validator");
 
@@ -53,6 +54,7 @@ const storage = multer.diskStorage({
 const uploadFile = multer({ storage });
 
 const usersController = require("../controllers/usersController");
+const userAdminMiddleware = require("../middlewares/userAdminMiddleware");
 
 //formulario de registro
 router.get("/register", guesMiddleware, usersController.register);
@@ -63,9 +65,11 @@ router.post("/register", uploadFile.single("avatar"),
 
 //formulario de login
 router.get("/login", guesMiddleware, usersController.login);
+router.get("/admin", usersController.admin);
 
 //procesar de login
 router.post("/login", usersController.loginProcces);
+
 
 //perfil de usuario
 router.get("/profile", authMiddleware, usersController.profile);
@@ -76,4 +80,5 @@ router.get("/logout", usersController.logout);
 //edit
 router.get("/detail/:id", usersController.detail);
 router.put("/edit/:id", usersController.edit);
+
 module.exports = router;
