@@ -296,7 +296,21 @@ header {
   margin: 5% auto;
 }
 
+
+
 /*Productos*/
+
+.content{
+  display: flex;
+  justify-content: space-between;
+}
+.alingDescription{
+  text-align: justify;
+  padding-right: 15px;
+}
+
+
+
 
 .cartContainer {
   align-items: center;
@@ -321,6 +335,12 @@ header {
 
 .cartContainer .product .imgContainer img {
   width: 100%;
+}
+
+
+.imgProductDetail{
+  width: 600px;
+  height: 600px;
 }
 
 .cartContainer .product .productInfo .add {

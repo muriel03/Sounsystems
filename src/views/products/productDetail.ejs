@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Detail</title>
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href='/css/stylesProduct.css'>
-    <link rel="stylesheet" href="/css/styles.css">  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -19,23 +19,21 @@
     <section class="inicio" id="inicio">
 
         <div class="content">
-
-            <h3><%= product.name %></span></h3>
-            <ul class="description">
-                <p >
-                   <img src="/images/<%= product.img %>" alt="">                   
-                </p>
-                <p><%= product.description %></p>
+          <div class="productDetail">
+                <h3><%= product.name %></span></h3>
+                <img class="imgProductDetail" src="/images/<%= product.img %>" alt="">
+            </div>
+            <div class="description">
+                <p class="alingDescription"><%= product.description %></p><br>
                 <p>
-                    <h1>Precio</h1>
-                    <%=  '$'+ product.price %>                    
-                </p>               
+                    <h1>Precio:</h1>
+                    <%=  '$'+ product.price %>
+                </p><br>
                 <li id="comprar"> <a href="shoppingCart" class="btn">Agregar al Carrito</a></li>
                 <!-- <form action="/delete/:<%= product.img %>">
                   <li id="comprar"> <a href="shoppingCart" class="btn">Eliminar Producto</a></li>
                 </form> -->
-            </ul>
-            
+            </div>
           </div>
         </div>
         </section>
