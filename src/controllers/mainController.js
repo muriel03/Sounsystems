@@ -109,7 +109,9 @@ const controller = {
 
     deleteProduct: (req, res) => {
         res.redirect('/');
-    }
+    },
+
+    
 }
 
 module.exports = controller;

@@ -132,6 +132,18 @@ const controller = {
       avatar: req.session.userLogged.avatar,
     };
   },
+
+  admin: (req, res) => {
+    let brands = db.Brand.findAll();
+    let types = db.TypeUser.findAll();
+    let products = db.Product.findAll();
+    let category = db.Category.findAll();
+  Promise.all([brands, types, products, category])
+  .then(([brandsAll, typesAll, productosAll, categoryAll])=>{
+    res.render('user/admin', {brandsAll, typesAll, productosAll, categoryAll})
+    
+  })
+  }
 };
 
 module.exports = controller;

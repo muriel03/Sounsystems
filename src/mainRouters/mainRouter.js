@@ -37,4 +37,6 @@ router.put("/update/:id", upload.single("productImg"), validations ,mainControll
 //Eliminar un producto
 router.delete('/delete/:id', mainController.deleteProduct);
 
+
+
 module.exports = router;
