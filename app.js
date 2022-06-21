@@ -27,6 +27,7 @@ const productRouter = require("./src/mainRouters/productRouter");
 const typeUserRouter = require("./src/mainRouters/typeUserRouter");
 const brandsRouter = require("./src/mainRouters/brandsRouter");
 const categoryRouter = require("./src/mainRouters/categeryRouter");
+const apiRoutes = require('./src/mainRouters/Api/apiRoutes');
 //const adminRouter = require (".src/mainRouters/adminRouter");
 const methodOverride = require("method-override");
 
@@ -37,6 +38,7 @@ app.use(methodOverride("_method"));
 app.use(express.json());
  
 app.use("/", mainRouter);
+app.use('/api', apiRoutes);
 app.use("/products", productRouter);
 app.use("/type", typeUserRouter);
 app.use("/users", usersRouter);
