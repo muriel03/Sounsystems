@@ -34,17 +34,17 @@ module.exports = (sequelize, DataTypes)=>{
         timesTamps: false,
         createdAt: false,
         updatedAt: false,
+        mapToModel: true
     };
 
     const User = sequelize.define(alias, cols, config);
 
-  /*User.associate = function(models){
+    /*User.associate = function(models){
         User.belongsTo(models.TypeUser,{
             as:"typeUser",
             foreingKey: "typeuser_id"
         });
 
     }*/
-
     return User;
 };
