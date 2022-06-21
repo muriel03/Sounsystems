@@ -35,16 +35,7 @@ const getProductById = (req, res)=>{
     db.Product.findByPk(id)
         .then((product)=>{
             res.status(200).json({
-                product/* : {
-                    id: product.id,
-                    name: product.name,
-                    description: product.description,
-                    img: `http://localhost:3030/images/${product.img}`,
-                    price: product.price,
-                    discount: product.discount,
-                    category: product.category_id,
-                    brand: product.brand_id
-                } */,
+                product,
                 img_url: `http://localhost:3030/images/${product.img}`
             })
         })
