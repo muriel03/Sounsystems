@@ -89,7 +89,7 @@ const controller = {
             let productToEdit = db.Product.findByPk(idParam);
             let categoryList = await db.Category.findAll();
             let brandList = await db.Brand.findAll();
-            res.render('./products/editProduct/', {
+            res.render('./products/editProduct', {
                 productToEdit, categoryList, brandList, ...req.body, errors: {...resultValidations.mapped()}
             });
             return;

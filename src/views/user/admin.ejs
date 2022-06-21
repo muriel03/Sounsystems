@@ -6,24 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/stylesLogin.css" />
     <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="stylesheet" href="/css/asideAdmin.css"/>
+    <script src="https://kit.fontawesome.com/e00c988d1a.js" crossorigin="anonymous"></script>
     <title>Admin</title>
 </head>
 <body>
-    <%- include ('../partials/header') %>
-    <h1 class="Admin">Admin</h1>
-    <div class="AdminBlock">
-        <a href="/brands/list">Brands</a>
-    </div>
-    <div class="AdminBlock">
-        <a href="/type/list">Types Users</a>
-    </div>
-    <div class="AdminBlock">
-        <a href="/newProduct">Products</a>
-    </div>
-    <div class="AdminBlock">
-        <a href="/category/list">Category</a>
-    </div>
-
+    <%- include ('../partials/header') %>   
+    <%- include ('../partials/asideAdmin') %>
+    
     <%- include('../partials/footer')%>
 </body>
 </html>

@@ -1,0 +1,32 @@
+.asideAdmin {
+  padding-left: 30px;
+  padding-top: 50px;
+  height: 100vh;
+  width: 200px;
+  background-color: black;
+}
+.asideAdminContainer { 
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.AdminBlock {
+  width: 100%;
+  height: 100%;
+}
+.AdminBlock a {
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  font-weight: 700;
+  width: 100%;
+}
+.AdminBlock a:hover {
+  background-color: white;
+  color: black;
+}
+.flexBoxBrands{
+    display: flex;
+    gap: 100px;   
+}

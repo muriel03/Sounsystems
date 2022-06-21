@@ -7,7 +7,9 @@ const User = require("../models/User");
 const controller = {
   register: (req, res) => {
     db.TypeUser.findAll().then((category) => {
-      res.render("./user/register", { category });
+      res.render("./user/register", {
+        category: category.filter((item) => item.name != "Admin"),
+      });
     });
   },
   proccesRegister: async (req, res) => {
@@ -69,9 +71,13 @@ const controller = {
           if (req.body.remember_user) {
             res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 2 });
           }
-
+          console.log("esto llega ", userToLogin);
+          if(userToLogin.typeuser_id == 5){
+           return res.redirect("/users/admin");
+          }else{
           return res.redirect("profile");
         }
+      }
         return res.render("./user/login", {
           errors: {
             email: {
@@ -138,12 +144,17 @@ const controller = {
     let types = db.TypeUser.findAll();
     let products = db.Product.findAll();
     let category = db.Category.findAll();
-  Promise.all([brands, types, products, category])
-  .then(([brandsAll, typesAll, productosAll, categoryAll])=>{
-    res.render('user/admin', {brandsAll, typesAll, productosAll, categoryAll})
-    
-  })
-  }
+    Promise.all([brands, types, products, category]).then(
+      ([brandsAll, typesAll, productosAll, categoryAll]) => {
+        res.render("user/admin", {
+          brandsAll,
+          typesAll,
+          productosAll,
+          categoryAll,
+        });
+      }
+    );
+  },
 };
 
 module.exports = controller;

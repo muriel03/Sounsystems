@@ -17,12 +17,12 @@
 .Admin {
   text-align: center;
 }
-.AdminBlock {
+/*.AdminBlock {
   border: solid 1px red;
   text-align: center;
   height: 100px;
   width: 100px;
-}
+}*/
 
 body {
   font-family: "Montserrat";
@@ -603,7 +603,7 @@ ul {
   .cartContainer {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   .ss-icon {
     margin-left: 5px;

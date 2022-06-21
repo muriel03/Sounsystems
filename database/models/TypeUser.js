@@ -21,7 +21,7 @@ module.exports = (sequialize, DataTypes) =>{
 
     const TypeUser  = sequialize.define(alias, cols, config);
 
-   /* TypeUser.asocciante = function(models){
+    /*TypeUser.asocciante = function(models){
         TypeUser.hasMany(models.User,{
             as: "user",
             foreingKey: "typeUser_id"

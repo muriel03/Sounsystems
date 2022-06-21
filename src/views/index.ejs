@@ -38,12 +38,10 @@
                 <img src="images/<%= products[i].img %>" alt="<%= products[i].name %>" />
               </div>
               <div class="productInfo">
-                <h3>
-                  <%= products[i].name %>
-                </h3>
-                <h4>
-                  <%= products[i].category %>
-                </h4>
+                <h3><%= products[i].name %></h3>
+                <h4>Precio sin descuento</h4>
+                <h3><%= '$' + products[i].price %></h3>   
+                <h3><%= 'Descuento ' + products[i].discount + '%' %></h3>
               </div>
           </a>
       </section>

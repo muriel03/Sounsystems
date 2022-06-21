@@ -11,6 +11,7 @@ const guesMiddleware = require("../middlewares/guesMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
 const userLoggedMiddleware = require("../middlewares/userLoggeMiddlewares");
 
+
 const { body } = require("express-validator");
 
 const validations = [

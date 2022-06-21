@@ -1,5 +1,10 @@
 function userAdminMiddleware(req, res, next) {
-  if(req.body.userLogged){
-}
+    console.log("usuario logueado ",req.session.userLogged);
+    if (req.session.userLogged.typeuser_id == 5) {
+        res.redirect("/users/admin");
+      } else {
+         res.redirect("profile");
+      }
+      next();
 }
 module.exports = userAdminMiddleware;

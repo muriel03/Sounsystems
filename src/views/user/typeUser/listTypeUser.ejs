@@ -7,12 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/css/listaCategorias.css" />
   <link rel="stylesheet" href="/css/styles.css">    
+  <link rel="stylesheet" href="/css/asideAdmin.css">
   <script src="https://kit.fontawesome.com/e00c988d1a.js" crossorigin="anonymous"></script>
   <title>Tpye de Usuarios</title>
 </head>
 
 <body> 
   <%- include ('../../partials/header') %>
+  <div class="flexBoxBrands">
+    <%- include ('../../partials/asideAdmin') %>
   <main> 
     <div class="top">
       <h1>Detail Users Type</h1>
@@ -44,6 +47,7 @@
       </ul>
     </div>
   </main>
+  </div>
   <%- include('../../partials/footer')%>
 </body>
 </html>

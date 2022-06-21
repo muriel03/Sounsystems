@@ -8,7 +8,8 @@
 }
 .button ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: 50px
 }
 .button ul li {
   list-style: none;
