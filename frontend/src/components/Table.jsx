@@ -1,12 +1,23 @@
-import React from "react";
+import { useEffect , useState} from "react";
 
 export const Table = () => {
+
+  const [data, setData] = useState({});
+
+  useEffect(()=>{
+
+    fetch('http://localhost:3030/api/products')
+      .then(response => response.json())
+      .then(data => setData(data))
+
+  },[])
+
   return (
     <div>
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th scope="col">Titulo</th>
+            <th scope="col">{data.count}</th>
             <th scope="col">Duracion</th>
             <th scope="col">Rating</th>
             <th scope="col">Genero</th>

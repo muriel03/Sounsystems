@@ -1,8 +1,8 @@
 import React from 'react'
 import { ContentRowTop } from './ContentRowTop';
 import { Footer } from './Footer';
-import { Table } from './Table';
 import { TopBar } from './TopBar';
+import {Table} from './Table'
 
 export const ContentWrapper = () => {
   return (

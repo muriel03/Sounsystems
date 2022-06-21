@@ -2,6 +2,7 @@ const express = require("express");
 const session = require("express-session");
 const cookies = require("cookie-parser");
 const app = express();
+const cors = require('cors');
 
 const userLoggedMiddleware = require("./src/middlewares/userLoggeMiddlewares");
 
@@ -10,7 +11,7 @@ app.use(
     secret: "Mensaje de session",
     resave: false,
     saveUninitialized: false,
-  }) 
+  })
 );
 
 app.use(userLoggedMiddleware);
@@ -36,9 +37,9 @@ app.use(express.static(__dirname + "/public"));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
 app.use(express.json());
- 
+
 app.use("/", mainRouter);
-app.use('/api', apiRoutes);
+app.use('/api', cors() ,apiRoutes);
 app.use("/products", productRouter);
 app.use("/type", typeUserRouter);
 app.use("/users", usersRouter);
