@@ -8,7 +8,9 @@ export const Table = () => {
 
     fetch('http://localhost:3030/api/products')
       .then(response => response.json())
-      .then(data => setData(data))
+
+      //.then(data => console.log("este es el objeto de productos",data))
+      .then(data => setData(data));
 
   },[])
 

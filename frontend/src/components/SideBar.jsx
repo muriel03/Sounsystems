@@ -12,7 +12,7 @@ const SideBar = (props) => {
         href="/"
       >
         <div className="sidebar-brand-icon">
-          <img className="w-100" src="images/logo-DH.png" alt="Digital House" />
+          <img className="w-100" src="images/soundSystem.jpeg" alt="Sound System" />
         </div>
       </a>
       {/* Divider */}
@@ -21,34 +21,34 @@ const SideBar = (props) => {
       <li className="nav-item active">
         <a className="nav-link" href="/">
           <i className="fas fa-fw fa-tachometer-alt" />
-          <span>Dashboard - DH movies</span>
+          <span>Products from SoundSystem</span>
         </a>
       </li>
       {/* Divider */}
       <hr className="sidebar-divider" />
       {/* Heading */}
-      <div className="sidebar-heading">Actions</div>
+      <div className="sidebar-heading">Vistas</div>
       {/* Nav Item - Pages */}
       <li className="nav-item">
         <a className="nav-link collapsed" href="/">
           <i className="fas fa-fw fa-folder" />
-          <span>Pages</span>
+          <span>Productos</span>
         </a>
       </li>
       {/* Nav Item - Charts */}
       <li className="nav-item">
         <a className="nav-link" href="/">
           <i className="fas fa-fw fa-chart-area" />
-          <span>Charts</span>
+          <span>Usuarios</span>
         </a>
       </li>
       {/* Nav Item - Tables */}
-      <li className="nav-item">
+      {/*<li className="nav-item">
         <a className="nav-link" href="/">
           <i className="fas fa-fw fa-table" />
           <span>Tables</span>
         </a>
-      </li>
+  </li>*/}
       {/* Divider */}
       <hr className="sidebar-divider d-none d-md-block" />
     </ul>
