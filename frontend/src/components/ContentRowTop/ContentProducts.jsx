@@ -1,33 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { MoviesBox } from "./MoviesBox";
+import { getProducts } from "../../services/productApi";
+import { getUsers } from "../../services/userApi";
 
 export const ContentRowMovies = () => {
+  const [products, setProducts] = useState();
+  const [users, setUsers] = useState();
 
-  const rowMovies = [{
-    titulo: "Productos en stock",
-    cifra: 21,
-    colorBorde: "#4e73df",
-    icono: "hola"
-  },
-  {
-    titulo: "Total categrías por productos",
-    cifra: 79,
-    colorBorde: "#1cc88a",
-    icono: "hola"
-  },
-  {
-    titulo: "Total de usuarios en la página",
-    cifra: 49,
-    colorBorde: "#f6c23e",
-    icono: "hola"
-  }]
-
+  useEffect(() => {
+    getProducts().then((data) => {
+      setProducts(
+        {
+          titulo: "Productos en la página",
+          cifra: data.count,
+          colorBorde: "#4e73df",
+        }
+      );
+    });
+    getUsers().then((data) => {
+      setUsers(
+            {
+          titulo: "Usuarios registrados",
+          cifra: data.count,
+          colorBorde: "#60FF47",
+        }
+      );
+    });
+  }, []);
 
   return (
     <div className="row">
-      {rowMovies.map((movie, index) => (
-        <MoviesBox titulo={movie.titulo} cifra={movie.cifra} colorBorde={movie.colorBorde} icono={movie.icono} key={index}/>
-      ))}
+      <MoviesBox {...products} />
+      <MoviesBox {...users} />
     </div>
   );
 };

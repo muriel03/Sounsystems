@@ -8,11 +8,8 @@ export const ContentWrapper = () => {
     <div id="content-wrapper" className="d-flex flex-column">
       <div id="content">
         <TopBar />
-       { <ContentRowTop />}
-      </div>
-      <div>
-       {/* <Table />*/}
-      </div>
+        <ContentRowTop />
+      </div>     
       <Footer />
     </div>
   );

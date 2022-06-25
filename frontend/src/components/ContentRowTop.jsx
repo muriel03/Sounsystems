@@ -1,6 +1,6 @@
 import React from "react";
 import { ContentRowMovies } from "./ContentRowTop/ContentProducts";
-import { Categories } from "./ContentRowTop/Categories";
+//import { Categories } from "./ContentRowTop/Categories";
 import { ProductsCategory } from "./ContentRowTop/ProductsCategory";
 
 export const ContentRowTop = () => {
@@ -15,7 +15,7 @@ export const ContentRowTop = () => {
         <ProductsCategory />
         {/* End content row last movie in Data Base */}
         {/* Genres in DB */}
-        <Categories />
+       {/* <Categories />*/}
       </div>
     </div>
   );

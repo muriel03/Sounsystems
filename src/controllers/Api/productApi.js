@@ -25,7 +25,8 @@ const getProduct = async (req, res) => {
             res.send({
                 count: product.length,
                 countByCategory: await getCategory(category),
-                product
+                product,
+                route: "http://localhost:3030/images/"
         });
     })
 }

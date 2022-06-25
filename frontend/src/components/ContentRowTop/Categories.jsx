@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../../services/productApi";
-import { ListCategories } from "./ListCategories";
+import { ListCategories } from "./ListCategories"; 
 
 export const Categories = () => {
   const [data, setData] = useState({});
@@ -18,7 +18,7 @@ export const Categories = () => {
           </h5>
         </div>
           {
-            data.countByCategory?.map((category, index) => {
+            data.countByCategory?.map((category, index) => { 
               return(
                 <div className="card-body">
                     <div className="row">
