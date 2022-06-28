@@ -21,7 +21,7 @@ export const ProductsCategory = () => {
                 id={product.id}
                 title={product.name}
                 image={data.route + product.img}
-                description={product.description}
+                description={product.description} 
               />
             );
           })}

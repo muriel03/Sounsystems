@@ -10,6 +10,7 @@ const getUser = (req, res) => {
                         id: item.id,
                         name: item.fullName,
                         email: item.email,
+                        avatar: item.avatar,
                         detail: `http://localhost:3030/api/users/${item.id}`
                     }
                 })

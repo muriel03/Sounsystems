@@ -13,13 +13,16 @@ export const Products = (props) => {
         />
         <div class="card-body">
           <h3>{props.title}</h3>
+          <div>
+            {props.name}
+          </div>
           <p class="card-text">{props.description}</p>
         </div>
         <div class="card-footer">
          <Link to={`/products/${props.id}`}>
-         <small class="text-muted">Ver detalle</small>
+         <small class="text-muted">Ver detalles</small>
          </Link>
-          
+         
         </div>
       </div>
     </div>
