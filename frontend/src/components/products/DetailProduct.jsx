@@ -14,7 +14,7 @@ export const DetailProduct = () => {
   return (
     <div className="col-lg-6 mb-4">
       <div class="card-body">
-        <h1 class="card-title">Detalle del producto</h1>
+        <h1 class="card-title">Detalle del productos</h1>
         <img src="..." class="card-img-top" alt="..." />
         {
           data?.product?.map((product, index)=>{

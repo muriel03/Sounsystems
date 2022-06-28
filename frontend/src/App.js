@@ -4,6 +4,7 @@ import SideBar from './components/SideBar';
 import {Route, Routes} from 'react-router-dom';
 import React from 'react';
 import {DetailProduct} from "./components/products/DetailProduct"
+import {UserList} from "./components/users/UserList";
 
 function App() {
   return (   
@@ -14,8 +15,8 @@ function App() {
           <Routes>
                 <Route path="/" element={ <ContentWrapper />}/>
                 <Route path="/products/:id" element={<DetailProduct/>}/>
+                <Route path="/users" element={<UserList/>}/>
                 {/*<Route path="/products" element={<Product/>}/>
-                <Route path="/users" element={<User/>}/>
                 <Route path="/users/:id" element={<DetailUser/>}/>
                 <Route path="*" element={<NotFound/>} />*/}
             </Routes>

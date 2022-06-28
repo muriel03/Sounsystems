@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes)=>{
         },
         avatar:{
             type: DataTypes.STRING,
-            allowNull: false
+            
         },
         typeuser_id:{
             type: DataTypes.INTEGER,
