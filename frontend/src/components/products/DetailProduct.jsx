@@ -6,7 +6,10 @@ export const DetailProduct = () => {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    getProductById().then((res) => setData(res));
+    getProductById().then((res) => {
+      console.log(res)
+      setData(res)
+    });
 
   }, []);
 
@@ -18,7 +21,6 @@ export const DetailProduct = () => {
         <img src="..." class="card-img-top" alt="..." />
         {
           data?.product?.map((product, index)=>{
-          
             return(
               <Products
                 id={product.id}

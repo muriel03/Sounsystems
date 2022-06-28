@@ -10,7 +10,7 @@ export const ProductsCategory = () => {
   }, []);
 
   return (
-    <div className="container-fluid">     
+    <div className="container-fluid">
         <div className="card-header py-3">
           <h5 className="m-0 font-weight-bold text-gray-800">Productos</h5>
         </div>
@@ -26,7 +26,6 @@ export const ProductsCategory = () => {
             );
           })}
         </div>
-      
     </div>
   );
 };
