@@ -1,35 +1,37 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { getProductById } from "../../services/productApi";
 import { Products } from "../ContentRowTop/Products";
 
 export const DetailProduct = () => {
-  const [data, setData] = useState({});
-  const id = 0
+  const [data, setData] = useState();
+  const { id } = useParams();
 
   useEffect(() => {
-    getProductById({id}).then((res) => {
-      console.log(res)
-      setData(res)
+    getProductById(id).then((res) => {
+      console.log(res);
+      setData(res);
     });
-
-  }, []);
+  }, [id]);
+  console.log(data);
 
   return (
     <div className="col-lg-6 mb-4">
-      <div class="card-body">
-        <h1 class="card-title">Detalle del productos</h1>
-        <img src="..." class="card-img-top" alt="..." />
-        {
-          data.product?.map((product, index)=>{
-            return(
-              <Products
-                img={data.route + product.img}
-                id={product.id}
-                name={product.name}
-              />
-            );
-          })
-        }
+      <div className="card-body">
+        <h1 className="card-title">Detalle del producto</h1>
+        {data && (
+          //if(data){}
+          <Products
+            image={data.route + data.product.img}
+            id={data.product.id}
+            hideDetailLink
+            name={data.product.name}
+            price={data.product.price}
+            discount={data.product.discount}
+            description={data.product.description}
+          />
+        )}
+        {!data && <h3>Cargando el detalle del producto</h3>}
       </div>
     </div>
   );

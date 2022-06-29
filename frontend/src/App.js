@@ -4,7 +4,6 @@ import SideBar from './components/SideBar';
 import {Route, Routes} from 'react-router-dom';
 import React from 'react';
 import {DetailProduct} from "./components/products/DetailProduct"
-import { Products } from "./components/ContentRowTop/Products.jsx"
 import {UserList} from "./components/users/UserList";
 import { ProductsCategory } from './components/ContentRowTop/ProductsCategory';
 
@@ -24,8 +23,6 @@ function App() {
             </Routes>
         </div>
     </React.Fragment>
-      
-
   );
 }
 
