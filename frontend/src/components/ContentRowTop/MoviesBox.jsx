@@ -3,13 +3,12 @@ import PropTypes from "prop-types";
 import {Link} from 'react-router-dom';
 
 export const MoviesBox = ({
-  titulo = "Peliculas en base de datos",
+  titulo = "Informacion en base de datos",
   cifra = 100,
   colorBorde = "#000000",
   to,
-  
-  
 }) => {
+
   return (
     <div className="col-md-4 mb-4">
       <div
@@ -30,7 +29,7 @@ export const MoviesBox = ({
               </div>
               <div className="h5 mb-0 font-weight-bold text-gray-800">
                 <div>
-                  <Link to={to}> 
+                <Link to={to}>
                 <small>ir</small>
                 </Link>
               </div>

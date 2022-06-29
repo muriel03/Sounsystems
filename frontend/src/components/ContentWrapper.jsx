@@ -9,7 +9,7 @@ export const ContentWrapper = () => {
       <div id="content">
         <TopBar />
         <ContentRowTop />
-      </div>     
+      </div>
       <Footer />
     </div>
   );

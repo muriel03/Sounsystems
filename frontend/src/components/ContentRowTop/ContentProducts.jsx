@@ -32,8 +32,7 @@ export const ContentRowMovies = () => {
   return (
     <div className="row">
       <MoviesBox {...products} to='/products' />
-      <MoviesBox {...users} to='/users' /> 
-      
+      <MoviesBox {...users} to='/users' />
     </div>
   );
 };

@@ -37,7 +37,7 @@ const getProductById = (req, res)=>{
         .then((product)=>{
             res.status(200).json({
                 product,
-                img_url: `http://localhost:3030/images/${product.img}`
+                route: `http://localhost:3030/images/`
             })
         })
 }

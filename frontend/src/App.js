@@ -4,11 +4,12 @@ import SideBar from './components/SideBar';
 import {Route, Routes} from 'react-router-dom';
 import React from 'react';
 import {DetailProduct} from "./components/products/DetailProduct"
+import { Products } from "./components/ContentRowTop/Products.jsx"
 import {UserList} from "./components/users/UserList";
+import { ProductsCategory } from './components/ContentRowTop/ProductsCategory';
 
 function App() {
-  return (   
-      
+  return (
       <React.Fragment>
       	<div id="wrapper">
           <SideBar />
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/" element={ <ContentWrapper />}/>
                 <Route path="/products/:id" element={<DetailProduct/>}/>
                 <Route path="/users" element={<UserList/>}/>
+                <Route path='/products' element={<ProductsCategory/>} />
                 {/*<Route path="/products" element={<Product/>}/>
                 <Route path="/users/:id" element={<DetailUser/>}/>
                 <Route path="*" element={<NotFound/>} />*/}
