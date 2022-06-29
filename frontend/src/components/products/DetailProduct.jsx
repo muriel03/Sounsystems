@@ -18,7 +18,7 @@ export const DetailProduct = () => {
   return (
     <div className="col-lg-6 mb-4">
       <div className="card-body">
-        <h1 className="card-title">Detalle del producto</h1>
+        <h1 className="card-title">Detalle del producto</h1> 
         {data && (
           //if(data){}
           <Products
