@@ -3,9 +3,9 @@ const router = express.Router();
 const path = require("path");
 const multer = require("multer");
 const mainController = require("../controllers/mainController");
-const validations = require('../middlewares/validations');
+const validations = require("../middlewares/validations");
 
-const storage = multer.diskStorage({ 
+const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "./public/images");
   },
@@ -17,8 +17,13 @@ const upload = multer({ storage });
 
 router.get("/", mainController.index);
 router.get("/search", mainController.search);
-router.get('/listProducts', mainController.listProducts);
-router.get('/listProductAdmin', mainController.listProductsAdmin);
+router.get("/listProducts", mainController.listProducts);
+router.get("/listProductAdmin", mainController.listProductsAdmin);
+router.get("/headphones", mainController.listHeadphones);
+router.get("/speakers", mainController.listSpeakers);
+
+//Shopping Cart
+router.get("/shoppingCart", mainController.shoppingCart);
 
 //Obtener el detalle de cada producto
 router.get("/productDetail/:id", mainController.productDetail);
@@ -27,17 +32,25 @@ router.get("/productDetail/:id", mainController.productDetail);
 router.get("/newProduct", mainController.newProduct);
 
 //Procesar el registro del nuevo producto
-router.post("/newProduct", upload.single("productImg"), validations ,mainController.createProduct);
+router.post(
+  "/newProduct",
+  upload.single("productImg"),
+  validations,
+  mainController.createProduct
+);
 
 //Formulario para editar el producto
 router.get("/editProduct/:id", mainController.editProduct);
 
 //Procesar la edicion del nuevo producto
-router.put("/update/:id", upload.single("productImg"), validations ,mainController.updateProduct);
+router.put(
+  "/update/:id",
+  upload.single("productImg"),
+  validations,
+  mainController.updateProduct
+);
 
 //Eliminar un producto
-router.delete('/delete/:id', mainController.deleteProduct);
-
-
+router.delete("/delete/:id", mainController.deleteProduct);
 
 module.exports = router;

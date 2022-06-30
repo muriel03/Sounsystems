@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Listado de products</title>
+    <title>Speakers</title>
     <script
       src="https://kit.fontawesome.com/eb0bcfcb68.js"
       crossorigin="anonymous"
@@ -15,25 +15,25 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/newProduct.css" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/newProduct.css" />
   </head>
   <body>
     <!-- header -->
     <%- include('../partials/header') %>
     <section class="cartContainer">
-      <h1>Listado de Productos</h1>
-      <% for(i = 0; i < products.length; i++) { %>
-      <a href="productDetail/<%= products[i].id %>"><section class="product">
-        <div class="imgContainer">
-          <img src="images/<%= products[i].img %>" alt="<%= products[i].name %>" />
-        </div>
-        <div class="productInfo">
-          <h2><%= products[i].name %></h2>
-          <h3><%= '$' + products[i].price %></h3>
-        </div>
-      </a></section>
-      <% } %>
+      <h1>Headphones</h1>
+      <% for(i = 0; i < speakers.length; i++) { %>
+        <a href="productDetail/<%= speakers[i].id %>"><section class="product">
+          <div class="imgContainer">
+            <img src="images/<%= speakers[i].img %>" alt="<%= speakers[i].name %>" />
+          </div>
+          <div class="productInfo">
+            <h2><%= speakers[i].name %></h2>
+            <h3><%= '$' + speakers[i].price %></h3>
+          </div>
+        </a></section>
+    <% } %>
     <!-- footer -->
     <%- include('../partials/footer') %>
   </body>

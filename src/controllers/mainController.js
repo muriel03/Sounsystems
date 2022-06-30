@@ -50,6 +50,37 @@ const controller = {
       });
   },
 
+  shoppingCart: (req, res) => {
+    db.Product.findAll().then((products) => {
+      res.render("./products/shoppingCart", { products });
+    });
+  },
+
+  listHeadphones: (req, res) => {
+    let headphones = [];
+    db.Product.findAll().then((product) => {
+      product.filter((a) => {
+        if (a.category_id == 2) {
+          headphones.push(a);
+        }
+      });
+      res.render("./products/headPhones", { headphones });
+    });
+  },
+
+  listSpeakers: (req, res) => {
+    let speakers = [];
+    db.Product.findAll().then((product) => {
+      product.filter((a) => {
+        if (a.category_id == 4) {
+          speakers.push(a);
+        }
+      });
+      console.log(speakers);
+      res.render("./products/speakers", { speakers });
+    });
+  },
+
   createProduct: async (req, res) => {
     const resultValidations = validationResult(req);
 
@@ -128,15 +159,13 @@ const controller = {
     }
   },
   deleteProduct: (req, res) => {
-    db.Product
-      .destroy({
-        where: {
-          id: req.params.id,
-        },
-      })
-      .then(()=>{
-          res.redirect("/listProductAdmin");
-      });
+    db.Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    }).then(() => {
+      res.redirect("/listProductAdmin");
+    });
   },
   listProductsAdmin: (req, res) => {
     db.Product.findAll().then(function (products) {

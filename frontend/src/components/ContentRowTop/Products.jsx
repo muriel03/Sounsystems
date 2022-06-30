@@ -22,7 +22,7 @@ export const Products = (props) => {
               <>
                 <p>
                   <strong>
-                    <del>${props.price}.00 COP</del>
+                    <del>${props.price} COP</del>
                   </strong>
                 </p>
                 <p>
@@ -31,7 +31,7 @@ export const Products = (props) => {
               </>
             )}
             <strong>
-              ${props.price - props.price * (props.discount / 100)}.00 COP
+              ${props.price - props.price * (props.discount / 100)} COP
             </strong>
           </div>
         </div>
