@@ -22,7 +22,7 @@
     <!-- header -->
     <%- include('../partials/header') %>
     <section class="cartContainer">
-      <h1>Headphones</h1>
+      <h1>Speakers</h1>
       <% for(i = 0; i < speakers.length; i++) { %>
         <a href="productDetail/<%= speakers[i].id %>"><section class="product">
           <div class="imgContainer">
@@ -31,6 +31,7 @@
           <div class="productInfo">
             <h2><%= speakers[i].name %></h2>
             <h3><%= '$' + speakers[i].price %></h3>
+            <h2><%= speakers[i].discount + '%'%></h2>
           </div>
         </a></section>
     <% } %>

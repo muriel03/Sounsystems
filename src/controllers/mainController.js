@@ -60,7 +60,7 @@ const controller = {
     let headphones = [];
     db.Product.findAll().then((product) => {
       product.filter((a) => {
-        if (a.category_id == 2) {
+        if (a.category_id == 4) {
           headphones.push(a);
         }
       });
@@ -72,7 +72,7 @@ const controller = {
     let speakers = [];
     db.Product.findAll().then((product) => {
       product.filter((a) => {
-        if (a.category_id == 4) {
+        if (a.category_id == 5) {
           speakers.push(a);
         }
       });
