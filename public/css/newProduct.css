@@ -35,16 +35,10 @@ body {
   color: var(--blackColor);
   display: flex;
   flex-direction: column;
-  padding: 40px 7%;
+  padding: 30px 7%;
   width: 100%;
 }
 
-.fomrContainer form h1 {
-  font-weight: 400;
-  width: 100%;
-  margin: 15px 0 25px;
-  font-size: 28px;
-}
 
 .fomrContainer form label {
   font-size: 16px;
@@ -54,7 +48,7 @@ body {
 .fomrContainer form input {
   border: 1px solid var(--blackColor);
   font-size: 16px;
-  height: 30px;
+  height: 20px;
   margin-bottom: 20px;
   outline: none;
   padding: 0 15px;
@@ -96,9 +90,8 @@ body {
 }
 
 .fomrContainer form div label input {
-  margin: 0 0 0 15px ;
+  margin: 0 0 0 15px;
 }
-
 
 .fomrContainer form button {
   background-color: var(--blueGreen);
@@ -129,25 +122,27 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-    .fomrContainer{
-        display: flex;
-        flex-direction: row;
-    }
-    
+  .fomrContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
   .fomrContainer .addImg {
-    background-image: url('../images/muestra3.jpeg');
-    background-size: cover;
+    background-image: url("../images/newProduct.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
     display: inline-block;
-    width: 50%;
+    width: 100%;
   }
 
   .fomrContainer .editImg {
-    background-image: url('../images/muestra4.jpeg');
+    background-image: url("../images/muestra4.jpeg");
   }
 
   .fomrContainer form {
     margin: 0;
-    width: 50%;
+    width: 60%;
     padding: 40px 10%;
   }
 }

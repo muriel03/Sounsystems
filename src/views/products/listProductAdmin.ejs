@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Listado de products</title>
+  <script src="https://kit.fontawesome.com/eb0bcfcb68.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/newProduct.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/asideAdmin.css">
+</head>
+
+<body>
+  <%- include('../partials/header') %>
+    <div class="flexBoxBrands">
+      <%- include ('../partials/asideAdmin') %>
+        <section class="cartContainer">
+          <h1>Listado de Productos</h1>
+          <% for(i=0; i < products.length; i++) { %>
+            <a href="productDetail/<%= products[i].id %>">
+              <section class="product">
+                <div class="imgContainer">
+                  <img src="images/<%= products[i].img %>" alt="<%= products[i].name %>" />
+                </div>
+                <div class="productInfo">
+                  <h2>
+                    <%= products[i].name %>
+                  </h2>
+                  <h3>
+                    <%= '$' + products[i].price %>
+                  </h3>
+                </div>
+                <div class="button-listproductAdmin">
+
+                  <a href="/editProduct/<%= products[i].id %> "><i class="fas fa-marker"></i></a>
+
+                  <form action="/delete/<%= products[i].id%>?_method=DELETE" method="POST">
+                    <button type="submit"><i class="fas fa-trash"></i></button>
+
+                  </form>
+                </div>
+            </a>
+        </section>
+        <% } %>
+    </div>
+    <!-- header -->
+
+
+    <!-- footer -->
+    <%- include('../partials/footer') %>
+</body>
+
+</html>

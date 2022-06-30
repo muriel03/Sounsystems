@@ -296,21 +296,20 @@ header {
   margin: 5% auto;
 }
 
-
-
 /*Productos*/
 
-.content{
+.content {
   display: flex;
   justify-content: space-between;
 }
-.alingDescription{
+.alingDescription {
   text-align: justify;
   padding-right: 15px;
 }
 
-
-
+.cartContainer1 {
+  position: absolute;
+}
 
 .cartContainer {
   align-items: center;
@@ -337,8 +336,7 @@ header {
   width: 100%;
 }
 
-
-.imgProductDetail{
+.imgProductDetail {
   width: 600px;
   height: 600px;
 }
@@ -474,7 +472,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 60px;
 }
 
 #description > hr {
@@ -586,6 +583,24 @@ ul {
   margin-left: 5%;
 }
 
+.button-listproductAdmin {
+  display: flex;
+  justify-content: center;
+}
+
+.button-listproductAdmin i {
+  margin: 10px;
+}
+
+.button-listproductAdmin button {
+  border: none;
+  background-color: transparent;
+}
+
+.button-listproductAdmin button i {
+  color: red;
+}
+
 @media (min-width: 768px) {
   body {
     font-family: "Montserrat";
@@ -605,6 +620,7 @@ ul {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+
   .ss-icon {
     margin-left: 5px;
     height: 150px;

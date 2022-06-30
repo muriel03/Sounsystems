@@ -16,7 +16,7 @@ export const DetailProduct = () => {
   console.log(data);
 
   return (
-    <div className="col-lg-6 mb-4">
+    <div className="col-lg-6 mb-4"> 
       <div className="card-body">
         <h1 className="card-title">Detalle del producto</h1> 
         {data && (

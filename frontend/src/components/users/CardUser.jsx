@@ -15,11 +15,15 @@ export default function CardUser(props) {
           <h3>{props.name}</h3>
           <p className="card-text">{props.email}</p>
         </div>
+        {!props.hideDetailLink?(
         <div className="card-footer">
-          <Link to={`/users/${props.id}`}>
+          <Link to={`/users/${props.id}`}> 
             <small className="text-muted">Ver detalles</small>
           </Link>
         </div>
+        ):(
+          <></>
+        )}
       </div>
     </div>
   );

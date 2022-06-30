@@ -18,6 +18,7 @@ const upload = multer({ storage });
 router.get("/", mainController.index);
 router.get("/search", mainController.search);
 router.get('/listProducts', mainController.listProducts);
+router.get('/listProductAdmin', mainController.listProductsAdmin);
 
 //Obtener el detalle de cada producto
 router.get("/productDetail/:id", mainController.productDetail);

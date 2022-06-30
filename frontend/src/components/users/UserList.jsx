@@ -18,7 +18,7 @@ export const UserList = () => {
       <div className="card-columns">
         {data.map((item, i) => {
           return <CardUser
-            key = {i}
+            key = {i} 
             id = {item.id}
             avatar = {item.avatar}
             name = {item.name}

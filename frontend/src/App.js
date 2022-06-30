@@ -6,6 +6,7 @@ import React from 'react';
 import {DetailProduct} from "./components/products/DetailProduct"
 import {UserList} from "./components/users/UserList";
 import { ProductsCategory } from './components/ContentRowTop/ProductsCategory';
+import DetailUser from './components/users/DetailUser';
 
 function App() {
   return (
@@ -17,8 +18,8 @@ function App() {
                 <Route path="/products/:id" element={<DetailProduct/>}/>
                 <Route path="/users" element={<UserList/>}/>
                 <Route path='/products' element={<ProductsCategory/>} />
-                {/*<Route path="/products" element={<Product/>}/>
                 <Route path="/users/:id" element={<DetailUser/>}/>
+                {/*<Route path="/products" element={<Product/>}/>
                 <Route path="*" element={<NotFound/>} />*/}
             </Routes>
         </div>
